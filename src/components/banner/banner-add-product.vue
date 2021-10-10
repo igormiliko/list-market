@@ -2,30 +2,44 @@
     <div id="start" class="pt-8">
         <p class="text-white text-2xl text-center mb-3 shadow-2xl">{{addProduct}}</p>
         <div class="flex justify-center">
-            <button @click="debug" 
+            <button @click="showProductPage"
                     class="material-icons w-8/12 h-8 mb-6 border-2 border-green-400 rounded-lg text-center text-blue-400 hover:bg-green-400 hover:text-white hover:pointer">
                     add</button>
         </div>
     </div>
 </template>
 <script>
+import { mapState, mapMutations } from 'vuex'
 
 export default {
     name: 'BannerAddProduct',
     data(){
         return{
-            LANGUAGE: '',
             addProduct: 'Click to add a product',
-            showCard: false // Make a prop to share with the add page component and show then
+            showCard: false, // Make a prop to share with the add page component and show then  
         }
     },
     methods: {
-        debug(){
-            console.log(this.LANGUAGE)
+        ...mapMutations(['showProductPage']),
+        debug() {
+            console.log(this.addAproduct)
+            this.addAproduct = 'Hi'
+            console.log(this.addAproduct)
         }
     },
     watch: {
-        //implement the translate state method
+        LANGUAGE(){
+            this.LANGUAGE == 'en-US' ? this.addProduct = this.TRANSLATE.addProduct.EN :
+            this.LANGUAGE == 'pt-BR' ? this.addProduct = this.TRANSLATE.addProduct.PT :
+            this.LANGUAGE == 'es-ES' ? this.addProduct = this.TRANSLATE.addProduct.ES :
+            this.LANGUAGE == 'ru' ? this.addProduct = this.TRANSLATE.addProduct.RU :
+            this.LANGUAGE == 'ch' ? this.addProduct = this.TRANSLATE.addProduct.CH :
+            this.LANGUAGE == 'ko' ? this.addProduct = this.TRANSLATE.addProduct.KO :
+            this.addProduct = this.TRANSLATE.addProduct.EN
+      }
+    },
+    computed: {
+        ...mapState(['LANGUAGE', 'TRANSLATE']),
     }
 }
 </script>

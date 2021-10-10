@@ -1,20 +1,28 @@
 <template>
 <div class="overflow-hidden">
-  <Header class="absolute"/>
-  <MainPage />
+  <Header class="absolute" />
+    <MainPage v-if="toShowAddProductPage" />
+    <AddPage v-else/>
 </div>
 </template>
 
 <script>
+import { mapState } from 'vuex'
+
 import Header from './components/layout/header.vue'
 import MainPage from './pages/main-page.vue'
+import AddPage from './pages/add-page.vue'
 
 export default {
   name: 'App',
   components: {
     Header,
-    MainPage
+    MainPage,
+    AddPage
   },
+  computed: {
+    ...mapState(['toShowAddProductPage'])
+  }
 }
 </script>
 

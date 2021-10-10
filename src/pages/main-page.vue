@@ -1,5 +1,5 @@
 <template>
-    <div @mousemove="axlesToDrag" v-if="!showCard" class="w-full h-full relative mt-12" key="table">
+    <div @mousemove="axlesToDrag" v-if="!showCard" class="w-full h-full relative mt-12">
         <BannerAddProduct />
         <Table />
     </div>
