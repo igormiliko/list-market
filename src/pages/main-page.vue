@@ -1,48 +1,45 @@
 <template>
-    <div @mousemove="axlesToDrag" v-if="!showCard" class="w-full h-full relative mt-12">
-        <BannerAddProduct />
-        <Table />
+    <div>
+        <div @mousemove="axlesToDrag" v-if="!showCard" class="w-full h-full relative mt-12">
+            <BannerAddProduct />
+            <Table />
+
+        </div>
+        
+        <div v-if="addMarket"
+             class="absolute flex flex-wrap justify-center top-0 h-screen w-full bg-gray-900 bg-opacity-50">
+            <CardAddProduct />
+        </div>
     </div>
 </template>
 <script>
+import { mapState } from 'vuex'
+
 //import Coin from '../components/buttons/coin-btn.vue'
 import BannerAddProduct from '../components/banner/banner-add-product.vue'
 import Table from '../components/table/table.vue'
+import CardAddProduct from '../components/card/addMarketCard.vue'
 
 export default {
     name: 'mainPage',
     components: {
        // Coin,
        BannerAddProduct,
-       Table
+       Table,
+       CardAddProduct
     },
     data(){
         return {
-            showTotal: false,
-            totalOfBestPrice: 0,
-            totalTXT: '',
-            screenX: '',
-            screenY: '',
-            axelsXY: '',
-            startDrag: false,
+            
         }
     },
     methods: {
-        startToDrag(){
-            this.startDrag = true
-        },
-          stopToDrag(){
-            this.startDrag = false
-        },
-        axlesToDrag(e){
-        if(this.startDrag == true){
-            //console.log(e)
-            this.screenX = e.screenX
-            this.screenY = e.screenY
-        }
+
+    },
+    computed: {
+        ...mapState(['addMarket'])
     }
   }
-}
 </script>
 <style>
     .toRight-item {

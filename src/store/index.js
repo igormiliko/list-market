@@ -6,7 +6,8 @@ const store = createStore({
     LANGUAGE: 'en-US',
     TRANSLATE: translateAPP,
     marketList: [{name: 'banana', price:'2.35'}],
-    toShowAddProductPage: false
+    toShowAddProductPage: false,
+    addMarket: true,
   }),
   mutations: {
     changeLang (state, lang) {
@@ -14,6 +15,9 @@ const store = createStore({
     },
     alternatePage(state) {
       state.toShowAddProductPage = !state.toShowAddProductPage
+    },
+    showAddMarket(state){
+      state.addMarket = !state.addMarket
     }
   }
 })

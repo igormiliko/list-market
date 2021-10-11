@@ -44,7 +44,7 @@ export default {
     methods: {
        ...mapMutations(['changeLang']),
       debug() {
-        console.log(this.LANGUAGE)
+        console.log(this.addMarket)
       },
     },
 
@@ -61,7 +61,7 @@ export default {
     },
 
     computed: {
-      ...mapState(['LANGUAGE', 'TRANSLATE'])
+      ...mapState(['LANGUAGE', 'TRANSLATE', 'addMarket'])
     }
 }
 </script>

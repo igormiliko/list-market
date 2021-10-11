@@ -6,7 +6,7 @@
                 <td>{{ item.name }}</td>
                 <td>{{currency}}{{ item.price }}</td>
                 <td>
-                    <button @click="addMarket = !addMarket" 
+                    <button @click="showAddMarket()" 
                             :value="item.item_name" 
                             class="material-icons text-green-400 mr-2 mt-1">add</button>
 
@@ -19,7 +19,7 @@
     </tbody>
 </template>
 <script>
-import { mapState } from 'vuex'
+import { mapState, mapMutations } from 'vuex'
 
 export default {
     name: 'TableBody',
@@ -29,6 +29,7 @@ export default {
         currency: '$',
     }),
     methods: {
+        ...mapMutations(['showAddMarket']),
         deleteItem (ix) {
             this.marketList.splice(ix, 1)
           },
@@ -56,7 +57,7 @@ export default {
         }
     },
     computed: {
-        ...mapState(['LANGUAGE', 'TRANSLATE', 'marketList']),
+        ...mapState(['LANGUAGE', 'TRANSLATE', 'marketList', 'addMarket']),
     }
 }
 </script>
