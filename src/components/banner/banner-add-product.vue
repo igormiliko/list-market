@@ -2,7 +2,7 @@
     <div id="start" class="pt-8">
         <p class="text-white text-2xl text-center mb-3 shadow-2xl">{{addProduct}}</p>
         <div class="flex justify-center">
-            <button @click="showProductPage"
+            <button @click="alternatePage"
                     class="material-icons w-8/12 h-8 mb-6 border-2 border-green-400 rounded-lg text-center text-blue-400 hover:bg-green-400 hover:text-white hover:pointer">
                     add</button>
         </div>
@@ -20,7 +20,7 @@ export default {
         }
     },
     methods: {
-        ...mapMutations(['showProductPage']),
+        ...mapMutations(['alternatePage']),
         debug() {
             console.log(this.addAproduct)
             this.addAproduct = 'Hi'

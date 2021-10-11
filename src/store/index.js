@@ -12,7 +12,7 @@ const store = createStore({
     changeLang (state, lang) {
       state.LANGUAGE = lang
     },
-    showProductPage(state) {
+    alternatePage(state) {
       state.toShowAddProductPage = !state.toShowAddProductPage
     }
   }
