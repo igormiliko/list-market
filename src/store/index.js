@@ -1,13 +1,14 @@
-import {createStore} from 'vuex'
+import { createStore } from 'vuex'
 import translateAPP from './modules/translate'
 
 const store = createStore({
   state: () => ({
     LANGUAGE: 'en-US',
     TRANSLATE: translateAPP,
-    marketList: [{name: 'banana', price:'2.35'}],
+    marketList: [{name: 'banana', price:'2.35'}, {name: 'maçã', price:'2.35'}],
     toShowAddProductPage: false,
-    addMarket: true,
+    addMarket: false,
+    showItemInMarket: false
   }),
   mutations: {
     changeLang (state, lang) {
@@ -18,6 +19,9 @@ const store = createStore({
     },
     showAddMarket(state){
       state.addMarket = !state.addMarket
+    },
+    toShowItemInMarket(state){
+      state.showItemInMarket = !state.showItemInMarket
     }
   }
 })

@@ -12,7 +12,7 @@
 
                 </td>
                 <td @click="itemInMarket = item">                              
-                    <button @click="showMarketList" class="material-icons text-blue-400 mr-2 mt-1">storefront</button>
+                    <button @click="toShowItemInMarket()" class="material-icons text-blue-400 mr-2 mt-1">storefront</button>
                 </td>
             </tr>
         </transition-group>
@@ -24,15 +24,14 @@ import { mapState, mapMutations } from 'vuex'
 export default {
     name: 'TableBody',
     data: () => ({
-        //Bool
         addMarket: false,
         currency: '$',
     }),
     methods: {
-        ...mapMutations(['showAddMarket']),
+        ...mapMutations(['showAddMarket', 'toShowItemInMarket']),
         deleteItem (ix) {
             this.marketList.splice(ix, 1)
-          },
+        },
     },
     watch: {
         LANGUAGE(){

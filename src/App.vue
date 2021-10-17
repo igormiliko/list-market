@@ -1,8 +1,8 @@
 <template>
 <div class="overflow-hidden">
   <Header class="absolute" />
-    <MainPage v-if="toShowAddProductPage" />
-    <AddPage v-else/>
+    <MainPage v-show="!toShowAddProductPage" />
+    <AddPage v-show="toShowAddProductPage"/>
 </div>
 </template>
 

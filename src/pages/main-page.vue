@@ -3,12 +3,15 @@
         <div @mousemove="axlesToDrag" v-if="!showCard" class="w-full h-full relative mt-12">
             <BannerAddProduct />
             <Table />
-
         </div>
         
-        <div v-if="addMarket"
+        <div v-show="addMarket"
              class="absolute flex flex-wrap justify-center top-0 h-screen w-full bg-gray-900 bg-opacity-50">
             <CardAddProduct />
+        </div>
+        <div v-show="showItemInMarket"
+             class="absolute flex flex-wrap justify-center top-0 h-screen w-full bg-gray-900 bg-opacity-50">
+            <ShowItemInMarket />
         </div>
     </div>
 </template>
@@ -17,8 +20,9 @@ import { mapState } from 'vuex'
 
 //import Coin from '../components/buttons/coin-btn.vue'
 import BannerAddProduct from '../components/banner/banner-add-product.vue'
-import Table from '../components/table/table.vue'
+import Table from '../components/table/mainTable/table.vue'
 import CardAddProduct from '../components/card/addMarketCard.vue'
+import ShowItemInMarket from '../components/card/showItemInMarket.vue'
 
 export default {
     name: 'mainPage',
@@ -26,7 +30,8 @@ export default {
        // Coin,
        BannerAddProduct,
        Table,
-       CardAddProduct
+       CardAddProduct,
+       ShowItemInMarket,
     },
     data(){
         return {
@@ -37,7 +42,7 @@ export default {
 
     },
     computed: {
-        ...mapState(['addMarket'])
+        ...mapState(['addMarket', 'showItemInMarket'])
     }
   }
 </script>

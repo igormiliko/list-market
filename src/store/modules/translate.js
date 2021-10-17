@@ -131,6 +131,14 @@ LANGUAGE: 'english',
     CH: '成功！产品添加',
     KO: '성공! 추가된 제품'
   },
+  productMarketAddedTXT: {
+    EN: 'Success! Market Added',
+    PT: 'Mercado adicionado!',
+    RU: 'Успех! Рынок добавлен',
+    ES: '¡Éxito! Mercado añadido',
+    CH: '成功！市场增加',
+    KO: '성공! 시장 추가됨'
+  },
   errorText: {
     EN: 'Type all Datas',
     PT: 'Digite todos os dados',
