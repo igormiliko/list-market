@@ -34,6 +34,14 @@ LANGUAGE: 'english',
       CH: '价钱',
       KO: '가격'
     },
+    marketCol: {
+      EN: 'Market',
+      PT: 'Mercado',
+      RU: 'рынок',
+      ES: 'Mercado',
+      CH: '市场',
+      KO: '시장'
+    },
     noItems: {
       EN: 'No items!',
       PT: 'Sem items!',

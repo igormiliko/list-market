@@ -20,7 +20,7 @@ export default {
     }),
     methods: {
         debug(){
-            console.log(this.TRANSLATE.bestPriceTXT.EN)
+            console.log(this.LANGUAGE)
         }
     },
     watch: {
@@ -45,7 +45,7 @@ export default {
             }
         }
     },
-    computation: {
+    computed: {
         ...mapState(['LANGUAGE', 'TRANSLATE'])
     }
 }
