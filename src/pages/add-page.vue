@@ -1,6 +1,6 @@
 <template>
     <div id="card-page" class="flex justify-center w-full h-screen" key="card">
-        <Card :header="cardHeader">
+        <Card class="sm:mt-16" :header="cardHeader">
             <AddProductForm />
         </Card>
         <Snack emoji="&#9888;" :text="errorSnackTxt" bgColor="bg-red-400" />

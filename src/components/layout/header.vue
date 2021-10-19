@@ -9,14 +9,14 @@
         </div>
           <div class="text-2xl text-yellow-400">{{ titleApp }}</div>
         <div>
-          <button @click="showLanguages = !showLanguages" class="material-icons">translate</button>  
-          <span @click="showLanguages = !showLanguages" class="material-icons cursor-pointer text-white">
+          <button @click="toShowLanguagesTrue()" class="material-icons">translate</button>  
+          <span @click="toShowLanguagesTrue()" class="material-icons cursor-pointer text-white">
             arrow_drop_down
           </span>           
         </div>
       </nav>
         <div v-show="showLanguages">
-          <div @click="showLanguages = false" class="absolute z-40 w-32 shadow-xl border-r-4 border-b-4 border-gray-100 text-center bg-gray-50 text-blue-400 rounded-md float-right right-0 md:right-28 lg:right-32 top-12">
+          <div @click="toShowLanguagesFalse()"  class="absolute z-40 w-32 shadow-xl border-r-4 border-b-4 border-gray-100 text-center bg-gray-50 text-blue-400 rounded-md float-right right-0 md:right-28 lg:right-32 top-12">
             <ul>
               <li @click="changeLang('en-US')" class="hover:bg-gray-100 py-2 px-4 pt-2 rounded-t-md cursor-pointer">ENG</li>
               <li @click="changeLang('pt-BR')" class="hover:bg-gray-100 py-2 px-4 cursor-pointer border-t border-gray-200">PT-BR</li>
@@ -36,15 +36,14 @@ export default {
     name: 'header',
     data(){
         return {
-            showLanguages: false,
             titleApp: 'Market List',
         }
     },
 
     methods: {
-       ...mapMutations(['changeLang']),
+       ...mapMutations(['changeLang', 'toShowLanguagesTrue', 'toShowLanguagesFalse']),
       debug() {
-        console.log(this.addMarket)
+        this.toShowLanguages()
       },
     },
 
@@ -61,7 +60,7 @@ export default {
     },
 
     computed: {
-      ...mapState(['LANGUAGE', 'TRANSLATE', 'addMarket'])
+      ...mapState(['LANGUAGE', 'TRANSLATE', 'addMarket', 'showLanguages'])
     }
 }
 </script>

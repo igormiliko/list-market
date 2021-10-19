@@ -8,7 +8,8 @@ const store = createStore({
     marketList: [{name: 'banana', price:'2.35'}, {name: 'maçã', price:'2.35'}],
     toShowAddProductPage: false,
     addMarket: false,
-    showItemInMarket: false
+    showItemInMarket: false,
+    showLanguages: false,
   }),
   mutations: {
     changeLang (state, lang) {
@@ -22,7 +23,13 @@ const store = createStore({
     },
     toShowItemInMarket(state){
       state.showItemInMarket = !state.showItemInMarket
-    }
+    },
+    toShowLanguagesTrue(state){
+      state.showLanguages = true
+    },
+    toShowLanguagesFalse(state){
+      state.showLanguages = false
+    },
   }
 })
 

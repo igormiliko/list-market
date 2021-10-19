@@ -1,13 +1,13 @@
 <template>
 <div class="overflow-hidden">
   <Header class="absolute" />
-    <MainPage v-show="!toShowAddProductPage" />
-    <AddPage v-show="toShowAddProductPage"/>
+    <MainPage @click="toShowLanguagesFalse()" v-show="!toShowAddProductPage" />
+    <AddPage @click="toShowLanguagesFalse()" v-show="toShowAddProductPage"/>
 </div>
 </template>
 
 <script>
-import { mapState } from 'vuex'
+import { mapState, mapMutations } from 'vuex'
 
 import Header from './components/layout/header.vue'
 import MainPage from './pages/main-page.vue'
@@ -19,6 +19,9 @@ export default {
     Header,
     MainPage,
     AddPage
+  },
+  methods: {
+    ...mapMutations(['toShowLanguagesFalse'])
   },
   computed: {
     ...mapState(['toShowAddProductPage'])

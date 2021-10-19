@@ -81,8 +81,8 @@ export default {
                 this.priceInMarketTXT = this.TRANSLATE.priceInMarketTXT.KO
                 this.productPriceTXT = this.TRANSLATE.productPrice.KO
                 this.marketNameTXT = this.TRANSLATE.marketNameTXT.KO
-                this.errorSnackTxt = this.TRANSLATE.errorText.CH
-                this.successMarketSnackTxt = this.TRANSLATE.productMarketAddedTXT.CH
+                this.errorSnackTxt = this.TRANSLATE.errorText.KO
+                this.successMarketSnackTxt = this.TRANSLATE.productMarketAddedTXT.KO
             }
         }
     },
