@@ -79,7 +79,7 @@ LANGUAGE: 'english',
     EN: '$',
     PT: 'R$',
     RU: '₽',
-    ES: '$',
+    ES: '€',
     CH: '¥',
     KO: '₩'
   },

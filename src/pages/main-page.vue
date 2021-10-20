@@ -1,6 +1,6 @@
 <template>
     <div>
-        <div @mousemove="axlesToDrag" v-if="!showCard" class="w-full h-full relative mt-12">
+        <div v-if="!showCard" class="w-full h-full relative mt-12">
             <BannerAddProduct />
             <Table />
         </div>
@@ -32,14 +32,6 @@ export default {
        Table,
        CardAddProduct,
        ShowItemInMarket,
-    },
-    data(){
-        return {
-            
-        }
-    },
-    methods: {
-
     },
     computed: {
         ...mapState(['addMarket', 'showItemInMarket'])
