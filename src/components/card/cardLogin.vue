@@ -1,5 +1,5 @@
 <template>
-    <div class="w-11/12 lg:w-1/3 pb-8 lg:mt-32 rounded-t-xl rounded-b-md shadow-2xl bg-white bg-opacity-90 ">
+    <div class="w-11/12 lg:w-1/3 pb-8 lg:mt-28 rounded-t-xl rounded-b-md shadow-2xl bg-white bg-opacity-90 ">
         <div class="w-full h-12 text-2xl text-white text-center pt-2 rounded-t-xl bg-blue-500 shadow-xl">
             <div :class=[textColor] class="text-center shadow-lg">{{header}}</div>
         </div>

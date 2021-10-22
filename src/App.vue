@@ -1,7 +1,11 @@
 <template>
   <div @pointermove="axlesToDrag" class="w-screen h-screen">  
     <Header class="absolute" />
+      
       <LogIn @click="toShowLanguagesFalse()" v-show="showLogin" />
+      <!--<RegisterPage @click="toShowLanguagesFalse()" v-show="showLogin" />-->
+      <!--<ForgotPassPage @click="toShowLanguagesFalse()" v-show="showLogin" />-->
+      
       <div v-show="!showLogin">
           <div class="overflow-hidden">
               <MainPage @click="toShowLanguagesFalse()" v-show="!toShowAddProductPage" />
@@ -16,6 +20,8 @@
 import { mapState, mapMutations } from 'vuex'
 
 import Header from './components/layout/header.vue'
+//import RegisterPage from './pages/registerPage.vue'
+//import ForgotPassPage from './pages/forgotPassPage.vue'
 import LogIn from './pages/logIn.vue'
 import MainPage from './pages/main-page.vue'
 import AddPage from './pages/add-page.vue'
@@ -28,7 +34,9 @@ export default {
     MainPage,
     AddPage,
     LogIn,
-    CoinBtn
+    CoinBtn,
+    //RegisterPage,
+    //ForgotPassPage,
 
   },
   data: () => ({

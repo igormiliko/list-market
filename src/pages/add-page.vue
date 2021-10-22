@@ -3,7 +3,7 @@
         <Card class="sm:mt-16" :header="cardHeader">
             <AddProductForm />
         </Card>
-        <Snack emoji="&#9888;" :text="errorSnackTxt" bgColor="bg-red-400" />
+        <Snack emoji="&#9888;" :text="typeAllDatasTxt" bgColor="bg-red-400" />
         <Snack :text="successSnackTxt" bgColor="bg-green-400" />
     </div>
 </template>
@@ -23,39 +23,39 @@ export default {
     },
     data: () => ({
         cardHeader: 'Adding a Product',
-        errorSnackTxt: 'Type all datas',
+        typeAllDatasTxt: 'Type all datas',
         successSnackTxt: 'Success! Product Added'
     }),
     watch: {
         LANGUAGE() {
             if(this.LANGUAGE == 'en-US') {
                 this.cardHeader = this.TRANSLATE.addingProduct.EN
-                this.errorSnackTxt = this.TRANSLATE.errorText.EN
+                this.typeAllDatasTxt = this.TRANSLATE.errorText.EN
                 this.successSnackTxt = this.TRANSLATE.productAddedTXT.EN
             }
             else if(this.LANGUAGE == 'pt-BR') {
                 this.cardHeader = this.TRANSLATE.addingProduct.PT
-                this.errorSnackTxt = this.TRANSLATE.errorText.PT
+                this.typeAllDatasTxt = this.TRANSLATE.errorText.PT
                 this.successSnackTxt = this.TRANSLATE.productAddedTXT.PT
             }
              else if(this.LANGUAGE == 'es-ES') {
                 this.cardHeader = this.TRANSLATE.addingProduct.ES
-                this.errorSnackTxt = this.TRANSLATE.errorText.ES
+                this.typeAllDatasTxt = this.TRANSLATE.errorText.ES
                 this.successSnackTxt = this.TRANSLATE.productAddedTXT.ES
             }
              else if(this.LANGUAGE == 'ru') {
                 this.cardHeader = this.TRANSLATE.addingProduct.RU
-                this.errorSnackTxt = this.TRANSLATE.errorText.RU
+                this.typeAllDatasTxt = this.TRANSLATE.errorText.RU
                 this.successSnackTxt = this.TRANSLATE.productAddedTXT.RU
             }
              else if(this.LANGUAGE == 'ch') {
                 this.cardHeader = this.TRANSLATE.addingProduct.CH
-                this.errorSnackTxt = this.TRANSLATE.errorText.CH
+                this.typeAllDatasTxt = this.TRANSLATE.errorText.CH
                 this.successSnackTxt = this.TRANSLATE.productAddedTXT.CH
             }
              else if(this.LANGUAGE == 'ko') {
                 this.cardHeader = this.TRANSLATE.addingProduct.KO
-                this.errorSnackTxt = this.TRANSLATE.errorText.KO
+                this.typeAllDatasTxt = this.TRANSLATE.errorText.KO
                 this.successSnackTxt = this.TRANSLATE.productAddedTXT.KO
             }
         }

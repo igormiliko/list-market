@@ -218,7 +218,72 @@ LANGUAGE: 'english',
     ES: 'Olvidó la contraseña?',
     CH: '忘记密码？',
     KO: '비밀번호를 잊으셨나요?'
+  },
+  register: {
+    EN: 'Register',
+    PT: 'Cadstre-se',
+    RU: 'Pегистр',
+    ES: 'Registrarse',
+    CH: '登记',
+    KO: '등록하다'
+  },
+  email: {
+    EN: 'Email',
+    PT: 'Email',
+    RU: 'Эл. адрес',
+    ES: 'Correo electrónico',
+    CH: '电子邮件',
+    KO: '이메일'
+  },
+  phone: {
+    EN: 'Phone Number',
+    PT: 'Número do celular',
+    RU: 'Номер телефона',
+    ES: 'Número de teléfono',
+    CH: '电话号码',
+    KO: '전화 번호'
+  },
+  confirmPassword: {
+    EN: 'Confirm the Password',
+    PT: 'Confirme a senha',
+    RU: 'Подтвердите пароль',
+    ES: 'Confirma la contraseña',
+    CH: '确认密码',
+    KO: '비밀번호 확인'
+  },
+  recoverPass: {
+    EN: 'Recover Password',
+    PT: 'Recuperar a senha',
+    RU: 'Восстановить пароль',
+    ES: 'Recuperar contraseña',
+    CH: '恢复密码',
+    KO: '비밀번호 복구'
+  },
+  successRecoveryPass: {
+    EN: 'Recovery send with success!',
+    PT: 'Recuperação enviada com sucesso!',
+    RU: 'Восстановление отправлено успешно!',
+    ES: '¡Envío de recuperación con éxito!',
+    CH: '恢复发送成功！',
+    KO: '복구 전송 성공!'
+  },
+  successRegister: {
+    EN: 'Success on register, enjoy!',
+    PT: 'Sucesso no registro, divirta-se!',
+    RU: 'Успехов на регистрации, наслаждайтесь!',
+    ES: 'Éxito en el registro, ¡disfrútalo!',
+    CH: '注册成功，享受！',
+    KO: '등록 성공, 즐기십시오!'
+  },
+  successLogin: {
+    EN: 'Entering ...',
+    PT: 'Entrando ...',
+    RU: 'Вход ...',
+    ES: 'Entrando ...',
+    CH: '进入 ...',
+    KO: '입장 ...'
   }
+
 
   
 }

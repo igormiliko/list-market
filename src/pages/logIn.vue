@@ -1,5 +1,8 @@
 <template>
-    <div id="login-page" class="flex flex-wrap justify-center content-center lg:content-start w-screen h-screen">
+    <div id="login-page" class="flex flex-wrap w-screen justify-center 
+                                content-center lg:content-start 
+                                py-24 lg:py-0
+                                h-screen md:h-auto lg:h-screen">
         <CardLogin :header="welcomeTXT" textColor="text-yellow-400" >
             <div class="w-full p-6 flex flex-col">
                 <Input :label="userNameTXT" />
@@ -19,15 +22,18 @@
                     </DefaultBtn>
                 </div>
             <div class="mt-4 flex justify-center text-xs break-words">
-              <span class="text-blue-400 cursor-pointer">{{newTXT}}</span> <span class="text-green-400 cursor-pointer">{{forgotTXT}}</span>
+              <span @click="toShowRegister()" class="text-blue-400 cursor-pointer">{{newTXT}}</span> <span class="text-green-400 cursor-pointer">{{forgotTXT}}</span>
             </div>
         </CardLogin>
+            <Snack emoji="&#9888;" :text="typeAllDatasTXT" bgColor="bg-red-400" />
+            <Snack class="mx-2" :text="successLoginTXT" bgColor="bg-green-400" />
     </div>
 </template>
 <script>
 import CardLogin from '../components/card/cardLogin.vue'
 import Input from '../components/forms/input.vue'
 import DefaultBtn from '../components/buttons/defaultBtn.vue'
+import Snack from '../components/snack/snack.vue'
 import { mapMutations, mapState } from 'vuex'
 
 
@@ -37,7 +43,7 @@ export default {
         CardLogin,
         Input,
         DefaultBtn,
-        
+        Snack        
     },
     data: () => ({
         welcomeTXT: 'Welcome',
@@ -45,10 +51,12 @@ export default {
         passwordTXT: 'Password',
         loginTXT: 'Login',
         newTXT: 'Are you new here?',
-        forgotTXT: 'Or are you forgot the password?'
+        forgotTXT: 'Or are you forgot the password?',
+        typeAllDatasTXT: 'Type all datas!',
+        successLoginTXT: 'Entering ...',
     }),
     methods: {
-        ...mapMutations(['toShowLogin']),
+        ...mapMutations(['toShowLogin', 'toShowForgot', 'toShowRegister']),
     },
     watch: {
         LANGUAGE(){
@@ -59,6 +67,8 @@ export default {
                 this.loginTXT = this.TRANSLATE.login.EN
                 this.newTXT = this.TRANSLATE.new.EN
                 this.forgotTXT = this.TRANSLATE.forgot.EN
+                this.typeAllDatasTXT = this.TRANSLATE.errorText.EN
+                this.successLoginTXT = this.TRANSLATE.successLogin.EN
             }
             else if(this.LANGUAGE == 'pt-BR') {
                 this.welcomeTXT = this.TRANSLATE.welcome.PT
@@ -67,7 +77,8 @@ export default {
                 this.loginTXT = this.TRANSLATE.login.PT
                 this.newTXT = this.TRANSLATE.new.PT
                 this.forgotTXT = this.TRANSLATE.forgot.PT
-
+                this.typeAllDatasTXT = this.TRANSLATE.errorText.PT
+                this.successLoginTXT = this.TRANSLATE.successLogin.PT
             }
              else if(this.LANGUAGE == 'es-ES') {
                 this.welcomeTXT = this.TRANSLATE.welcome.ES
@@ -76,6 +87,8 @@ export default {
                 this.loginTXT = this.TRANSLATE.login.ES
                 this.newTXT = this.TRANSLATE.new.ES
                 this.forgotTXT = this.TRANSLATE.forgot.ES
+                this.typeAllDatasTXT = this.TRANSLATE.errorText.ES
+                this.successLoginTXT = this.TRANSLATE.successLogin.ES
             }
              else if(this.LANGUAGE == 'ru') {
                 this.welcomeTXT = this.TRANSLATE.welcome.RU
@@ -84,6 +97,8 @@ export default {
                 this.loginTXT = this.TRANSLATE.login.RU
                 this.newTXT = this.TRANSLATE.new.RU
                 this.forgotTXT = this.TRANSLATE.forgot.RU
+                this.typeAllDatasTXT = this.TRANSLATE.errorText.RU
+                this.successLoginTXT = this.TRANSLATE.successLogin.RU
             }
              else if(this.LANGUAGE == 'ch') {
                 this.welcomeTXT = this.TRANSLATE.welcome.CH
@@ -92,6 +107,8 @@ export default {
                 this.loginTXT = this.TRANSLATE.login.CH
                 this.newTXT = this.TRANSLATE.new.CH
                 this.forgotTXT = this.TRANSLATE.forgot.CH
+                this.typeAllDatasTXT = this.TRANSLATE.errorText.CH
+                this.successLoginTXT = this.TRANSLATE.successLogin.CH
             }
              else if(this.LANGUAGE == 'ko') {
                 this.welcomeTXT = this.TRANSLATE.welcome.KO
@@ -100,6 +117,8 @@ export default {
                 this.loginTXT = this.TRANSLATE.login.KO
                 this.newTXT = this.TRANSLATE.new.KO
                 this.forgotTXT = this.TRANSLATE.forgot.KO
+                this.typeAllDatasTXT = this.TRANSLATE.errorText.KO
+                this.successLoginTXT = this.TRANSLATE.successLogin.KO
             }
         }
     },
