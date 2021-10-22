@@ -1,7 +1,8 @@
 <template>
     <button :class=[colorConcat]
-            class="w-1/3 h-8 border rounded-md text-center hover:text-white">
+            class="w-2/3 h-12 border rounded-md text-center hover:text-white">
         {{text}}
+        <slot></slot>
     </button>
 </template>
 <script>

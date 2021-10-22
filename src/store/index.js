@@ -10,6 +10,7 @@ const store = createStore({
     addMarket: false,
     showItemInMarket: false,
     showLanguages: false,
+    showLogin: false
   }),
   mutations: {
     changeLang (state, lang) {
@@ -29,6 +30,9 @@ const store = createStore({
     },
     toShowLanguagesFalse(state){
       state.showLanguages = false
+    },
+    toShowLogin(state){
+      state.showLogin = !state.showLogin
     },
   }
 })

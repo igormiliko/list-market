@@ -171,6 +171,54 @@ LANGUAGE: 'english',
     CH: '全部的',
     KO: '총'
   },
+  welcome: {
+    EN: 'Welcome',
+    PT: 'Bem vindo',
+    RU: 'Добро пожаловать',
+    ES: 'Bienvenido',
+    CH: '欢迎',
+    KO: '어서 오십시오'
+  },
+  userName: {
+    EN: 'Username',
+    PT: 'Nome de Usuário',
+    RU: 'Имя пользователя',
+    ES: 'Nombre de usuario',
+    CH: '用户名',
+    KO: '사용자 이름'
+  },
+  password: {
+    EN: 'Password',
+    PT: 'Senha',
+    RU: 'Пароль',
+    ES: 'Contraseña',
+    CH: '密码',
+    KO: '비밀번호'
+  },
+  login: {
+    EN: 'Login',
+    PT: 'Entrar',
+    RU: 'Войти',
+    ES: 'Entrar',
+    CH: '登录',
+    KO: '로그인'
+  },
+  new: {
+    EN: 'Are you  new  here?',
+    PT: 'Você é novo aqui?',
+    RU: 'Ты здесь новенький?',
+    ES: '¿Eres nuevo aquí?',
+    CH: '你是新来的吗？',
+    KO: '당신은 여기 새롭습니까?'
+  },
+  forgot: {
+    EN: 'Or are you forgot the password?',
+    PT: 'Ou você se esqueceu da senha?',
+    RU: 'Забыл пароль?',
+    ES: 'Olvidó la contraseña?',
+    CH: '忘记密码？',
+    KO: '비밀번호를 잊으셨나요?'
+  }
 
   
 }

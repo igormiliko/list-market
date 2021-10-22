@@ -1,8 +1,8 @@
 <template>
   <div @pointermove="axlesToDrag" class="w-screen h-screen">  
-    <LogIn v-if="true" />
-      <div v-else>
-        <Header class="absolute" />
+    <Header class="absolute" />
+      <LogIn @click="toShowLanguagesFalse()" v-show="showLogin" />
+      <div v-show="!showLogin">
           <div class="overflow-hidden">
               <MainPage @click="toShowLanguagesFalse()" v-show="!toShowAddProductPage" />
               <AddPage @click="toShowLanguagesFalse()" v-show="toShowAddProductPage"/>
@@ -47,7 +47,7 @@ export default {
     }
   },
   computed: {
-    ...mapState(['toShowAddProductPage']),
+    ...mapState(['toShowAddProductPage', 'showLogin']),
     drag(){
       if(this.startDrag == true){
         return {top: `${this.screenY - 25}px`, left: `${this.screenX - 25}px`}

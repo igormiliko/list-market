@@ -2,7 +2,7 @@
   <header class="absolute w-full h-12 bg-blue-600 border-b text-white shadow-xl">
       <nav class="flex flex-row justify-around pt-2 shadow-lg">
         <div>
-          <div @click="debug" class="material-icons cursor-pointer">shopping_cart</div>
+          <div @click="toShowLogin" class="material-icons cursor-pointer">shopping_cart</div>
           <span class="material-icons text-blue-600">
             arrow_drop_down
           </span>           
@@ -41,7 +41,7 @@ export default {
     },
 
     methods: {
-       ...mapMutations(['changeLang', 'toShowLanguagesTrue', 'toShowLanguagesFalse']),
+       ...mapMutations(['changeLang', 'toShowLanguagesTrue', 'toShowLanguagesFalse', 'toShowLogin']),
       debug() {
         this.toShowLanguages()
       },
