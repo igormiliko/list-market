@@ -32,9 +32,7 @@ export default {
         deleteItem (ix) {
             this.marketList.splice(ix, 1)
         },
-    },
-    watch: {
-        LANGUAGE(){
+        putLanguage(){
             if(this.LANGUAGE == 'en-US') {
                 this.currency = this.TRANSLATE.currency.EN
             }
@@ -54,6 +52,14 @@ export default {
                 this.currency = this.TRANSLATE.currency.KO
             }
         }
+    },
+    watch: {
+        LANGUAGE(){
+            this.putLanguage()
+        }
+    },
+    mounted() {
+        this.putLanguage()
     },
     computed: {
         ...mapState(['LANGUAGE', 'TRANSLATE', 'marketList', 'addMarket']),

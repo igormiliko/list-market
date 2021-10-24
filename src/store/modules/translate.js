@@ -34,7 +34,6 @@ LANGUAGE: 'english',
       CH: '价钱',
       KO: '가격'
     },
-<<<<<<< HEAD
     marketCol: {
       EN: 'Market',
       PT: 'Mercado',
@@ -43,8 +42,6 @@ LANGUAGE: 'english',
       CH: '市场',
       KO: '시장'
     },
-=======
->>>>>>> 3897a93a919b1f5f2959873860fbfdee8c7b944a
     noItems: {
       EN: 'No items!',
       PT: 'Sem items!',
@@ -82,11 +79,7 @@ LANGUAGE: 'english',
     EN: '$',
     PT: 'R$',
     RU: '₽',
-<<<<<<< HEAD
     ES: '€',
-=======
-    ES: '$',
->>>>>>> 3897a93a919b1f5f2959873860fbfdee8c7b944a
     CH: '¥',
     KO: '₩'
   },
@@ -146,7 +139,6 @@ LANGUAGE: 'english',
     CH: '成功！产品添加',
     KO: '성공! 추가된 제품'
   },
-<<<<<<< HEAD
   productMarketAddedTXT: {
     EN: 'Success! Market Added',
     PT: 'Mercado adicionado!',
@@ -155,8 +147,6 @@ LANGUAGE: 'english',
     CH: '成功！市场增加',
     KO: '성공! 시장 추가됨'
   },
-=======
->>>>>>> 3897a93a919b1f5f2959873860fbfdee8c7b944a
   errorText: {
     EN: 'Type all Datas',
     PT: 'Digite todos os dados',
@@ -181,7 +171,6 @@ LANGUAGE: 'english',
     CH: '全部的',
     KO: '총'
   },
-<<<<<<< HEAD
   welcome: {
     EN: 'Welcome',
     PT: 'Bem vindo',
@@ -293,12 +282,89 @@ LANGUAGE: 'english',
     ES: 'Entrando ...',
     CH: '进入 ...',
     KO: '입장 ...'
-  }
-
-=======
->>>>>>> 3897a93a919b1f5f2959873860fbfdee8c7b944a
-
+  },
   
+  translating: {
+    login(scope) {
+      if(scope.LANGUAGE == 'en-US') {
+        scope.welcomeTXT = scope.TRANSLATE.welcome.EN
+        scope.userNameTXT = scope.TRANSLATE.userName.EN
+        scope.passwordTXT = scope.TRANSLATE.password.EN
+        scope.loginTXT = scope.TRANSLATE.login.EN
+        scope.newTXT = scope.TRANSLATE.new.EN
+        scope.forgotTXT = scope.TRANSLATE.forgot.EN
+        scope.typeAllDatasTXT = scope.TRANSLATE.errorText.EN
+        scope.successLoginTXT = scope.TRANSLATE.successLogin.EN
+      }
+      else if(scope.LANGUAGE == 'pt-BR') {
+          scope.welcomeTXT = scope.TRANSLATE.welcome.PT
+          scope.userNameTXT = scope.TRANSLATE.userName.PT
+          scope.passwordTXT = scope.TRANSLATE.password.PT
+          scope.loginTXT = scope.TRANSLATE.login.PT
+          scope.newTXT = scope.TRANSLATE.new.PT
+          scope.forgotTXT = scope.TRANSLATE.forgot.PT
+          scope.typeAllDatasTXT = scope.TRANSLATE.errorText.PT
+          scope.successLoginTXT = scope.TRANSLATE.successLogin.PT
+      }
+      else if(scope.LANGUAGE == 'es-ES') {
+          scope.welcomeTXT = scope.TRANSLATE.welcome.ES
+          scope.userNameTXT = scope.TRANSLATE.userName.ES
+          scope.passwordTXT = scope.TRANSLATE.password.ES
+          scope.loginTXT = scope.TRANSLATE.login.ES
+          scope.newTXT = scope.TRANSLATE.new.ES
+          scope.forgotTXT = scope.TRANSLATE.forgot.ES
+          scope.typeAllDatasTXT = scope.TRANSLATE.errorText.ES
+          scope.successLoginTXT = scope.TRANSLATE.successLogin.ES
+      }
+      else if(scope.LANGUAGE == 'ru') {
+          scope.welcomeTXT = scope.TRANSLATE.welcome.RU
+          scope.userNameTXT = scope.TRANSLATE.userName.RU
+          scope.passwordTXT = scope.TRANSLATE.password.RU
+          scope.loginTXT = scope.TRANSLATE.login.RU
+          scope.newTXT = scope.TRANSLATE.new.RU
+          scope.forgotTXT = scope.TRANSLATE.forgot.RU
+          scope.typeAllDatasTXT = scope.TRANSLATE.errorText.RU
+          scope.successLoginTXT = scope.TRANSLATE.successLogin.RU
+      }
+      else if(scope.LANGUAGE == 'ch') {
+          scope.welcomeTXT = scope.TRANSLATE.welcome.CH
+          scope.userNameTXT = scope.TRANSLATE.userName.CH
+          scope.passwordTXT = scope.TRANSLATE.password.CH
+          scope.loginTXT = scope.TRANSLATE.login.CH
+          scope.newTXT = scope.TRANSLATE.new.CH
+          scope.forgotTXT = scope.TRANSLATE.forgot.CH
+          scope.typeAllDatasTXT = scope.TRANSLATE.errorText.CH
+          scope.successLoginTXT = scope.TRANSLATE.successLogin.CH
+      }
+      else if(scope.LANGUAGE == 'ko') {
+          scope.welcomeTXT = scope.TRANSLATE.welcome.KO
+          scope.userNameTXT = scope.TRANSLATE.userName.KO
+          scope.passwordTXT = scope.TRANSLATE.password.KO
+          scope.loginTXT = scope.TRANSLATE.login.KO
+          scope.newTXT = scope.TRANSLATE.new.KO
+          scope.forgotTXT = scope.TRANSLATE.forgot.KO
+          scope.typeAllDatasTXT = scope.TRANSLATE.errorText.KO
+          scope.successLoginTXT = scope.TRANSLATE.successLogin.KO
+      }
+    }
+  }  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
 
 export default translateAPP

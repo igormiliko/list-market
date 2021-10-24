@@ -1,8 +1,7 @@
 <template>
-    <button @click="alternatePage" type="reset" class="w-1/3 h-8 border rounded-md border-red-400 text-center text-red-400 hover:bg-red-400 hover:text-white" >
+    <button @click="alternatePage" type="reset" class="w-28 sm:w-60 md:w-72 lg:w-52 h-8 border rounded-md border-red-400 text-center text-red-400 hover:bg-red-400 hover:text-white" >
         {{cancelBtn}}
-    </button>
-    
+    </button> 
 </template>
 <script>
 import { mapState } from 'vuex'
@@ -12,8 +11,8 @@ export default {
     data: () => ({
         cancelBtn: 'Cancel'
     }),
-    watch: {
-        LANGUAGE() {
+    methods: {
+        putLanguage() {
                 if(this.LANGUAGE == 'en-US') {
                     this.cancelBtn = this.TRANSLATE.cancelBtn.EN
                 }
@@ -33,6 +32,14 @@ export default {
                     this.cancelBtn = this.TRANSLATE.cancelBtn.KO
                 }
             }
+    },
+    watch: {
+        LANGUAGE(){
+            this.putLanguage()
+        }
+    },
+    mounted() {
+        this.putLanguage()
     },
     computed: {
         ...mapState(['LANGUAGE', 'TRANSLATE'])

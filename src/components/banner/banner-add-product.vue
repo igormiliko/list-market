@@ -1,15 +1,17 @@
 <template>
     <div id="start" class="pt-8">
         <p class="text-white text-2xl text-center mb-3 shadow-2xl">{{addProduct}}</p>
-        <div class="flex justify-center">
-            <button @click="alternatePage"
-                    class="material-icons w-8/12 h-8 mb-6 border-2 border-green-400 rounded-lg text-center text-blue-400 hover:bg-green-400 hover:text-white hover:pointer">
-                    add</button>
-        </div>
+        <router-link to="/add_product">
+            <div class="flex justify-center">
+                    <button class="material-icons w-8/12 h-8 mb-6 border-2 border-green-400 rounded-lg text-center text-blue-400 hover:bg-green-400 hover:text-white hover:pointer">
+                            add
+                    </button>
+            </div>
+        </router-link>
     </div>
 </template>
 <script>
-import { mapState, mapMutations } from 'vuex'
+import { mapState } from 'vuex'
 
 export default {
     name: 'BannerAddProduct',
@@ -20,15 +22,12 @@ export default {
         }
     },
     methods: {
-        ...mapMutations(['alternatePage']),
         debug() {
             console.log(this.addAproduct)
             this.addAproduct = 'Hi'
             console.log(this.addAproduct)
-        }
-    },
-    watch: {
-        LANGUAGE(){
+        },
+        putLanguage(){
             this.LANGUAGE == 'en-US' ? this.addProduct = this.TRANSLATE.addProduct.EN :
             this.LANGUAGE == 'pt-BR' ? this.addProduct = this.TRANSLATE.addProduct.PT :
             this.LANGUAGE == 'es-ES' ? this.addProduct = this.TRANSLATE.addProduct.ES :
@@ -37,6 +36,14 @@ export default {
             this.LANGUAGE == 'ko' ? this.addProduct = this.TRANSLATE.addProduct.KO :
             this.addProduct = this.TRANSLATE.addProduct.EN
       }
+    },
+    watch: {
+        LANGUAGE(){
+            this.putLanguage()
+        }
+    },
+    mounted() {
+        this.putLanguage()
     },
     computed: {
         ...mapState(['LANGUAGE', 'TRANSLATE']),

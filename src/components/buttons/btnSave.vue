@@ -1,5 +1,5 @@
 <template>
-    <button class="w-1/3 h-8 border rounded-md border-green-400 text-center text-green-400 hover:bg-green-400 hover:text-white">
+    <button class="w-28 sm:w-60 md:w-72 lg:w-52 h-8 border rounded-md border-green-400 text-center text-green-400 hover:bg-green-400 hover:text-white">
         {{saveBtn}}
     </button>
 </template>
@@ -11,8 +11,8 @@ export default {
     data: () => ({
         saveBtn: 'Save'
     }),
-    watch: {
-        LANGUAGE() {
+    methods: {
+        putLanguage() {
                 if(this.LANGUAGE == 'en-US') {
                     this.saveBtn = this.TRANSLATE.saveBtn.EN
                 }
@@ -32,6 +32,14 @@ export default {
                     this.saveBtn = this.TRANSLATE.saveBtn.KO
                 }
             }
+    },
+    watch: {
+        LANGUAGE(){
+            this.putLanguage()
+        }
+    },
+    mounted() {
+        this.putLanguage()
     },
     computed: {
         ...mapState(['LANGUAGE', 'TRANSLATE'])

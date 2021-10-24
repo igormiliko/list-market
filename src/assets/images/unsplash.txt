@@ -3,5 +3,6 @@ add-page: Photo by <a href="https://unsplash.com/@graphicnode?utm_source=unsplas
 car markets: Photo by <a href="https://unsplash.com/@markusspiske?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Markus Spiske</a> on <a href="https://unsplash.com/s/photos/supermarket?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
 grape: Photo by <a href="https://unsplash.com/@rrajputphotography?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Rajesh Rajput</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
 orange: Photo by <a href="https://unsplash.com/@picoftasty?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Mae Mu</a> on <a href="https://unsplash.com/s/photos/blue-fruit?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
-    avocado: Photo by <a href="https://unsplash.com/@estudiobloom?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Estúdio Bloom</a> on <a href="https://unsplash.com/s/photos/avocado?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
-   
+avocado: Photo by <a href="https://unsplash.com/@estudiobloom?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Estúdio Bloom</a> on <a href="https://unsplash.com/s/photos/avocado?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+pineapple: Photo by <a href="https://unsplash.com/@pineapple?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Pineapple Supply Co.</a> on <a href="https://unsplash.com/backgrounds/nature/pineapple?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+  

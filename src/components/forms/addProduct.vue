@@ -5,18 +5,20 @@
            <Input :label="productPrice" :placeholder="currency+currency+currency" />
         </div>
 
-        <div class="flex justify-around">
-            <BtnSave />
-            <BtnCancel @click="alternatePage()" />
+        <div class="w-full flex justify-around">
+            <router-link to="/">
+                <BtnSave />
+            </router-link>
+          
+            <router-link to="/">
+                <BtnCancel />
+            </router-link>
+
         </div>
-<<<<<<< HEAD
     </form>
-=======
-        </form>
->>>>>>> 3897a93a919b1f5f2959873860fbfdee8c7b944a
 </template>
 <script>
-import { mapState, mapMutations } from 'vuex'
+import { mapState } from 'vuex'
 import Input from './input.vue'
 import BtnSave from '../buttons/btnSave.vue'
 import BtnCancel from '../buttons/btnCancel.vue'
@@ -35,11 +37,7 @@ export default {
         currency: '$',
     }),
     methods: {
-        ...mapMutations(['alternatePage'])
-    },
-
-    watch: {
-        LANGUAGE() {
+        putLanguage() {
             if(this.LANGUAGE == 'en-US') {
                 this.productName = this.TRANSLATE.productName.EN
                 this.productPrice = this.TRANSLATE.productPrice.EN
@@ -65,6 +63,14 @@ export default {
                 this.productPrice = this.TRANSLATE.productPrice.KO
             }
         }
+    },
+    watch: {
+        LANGUAGE(){
+            this.putLanguage()
+        }
+    },
+    mounted() {
+        this.putLanguage()
     },
     computed: {
         ...mapState(['LANGUAGE', 'TRANSLATE', 'toShowAddProductPage'])

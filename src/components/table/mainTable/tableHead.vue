@@ -18,8 +18,8 @@ export default {
         productCol: 'Product',
         priceCol: 'Price',
     }),
-    watch: {
-        LANGUAGE(){
+    methods: {
+        putLanguage(){
             if(this.LANGUAGE == 'en-US') {
                 this.productCol = this.TRANSLATE.table.productCol.EN
                 this.priceCol = this.TRANSLATE.table.priceCol.EN
@@ -45,6 +45,14 @@ export default {
                 this.priceCol = this.TRANSLATE.table.priceCol.KO
             }
         }
+    },
+    watch: {
+        LANGUAGE(){
+            this.putLanguage()
+        }
+    },
+    mounted() {
+        this.putLanguage()
     },
     computed: {
         ...mapState(['LANGUAGE', 'TRANSLATE']),

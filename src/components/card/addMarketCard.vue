@@ -1,8 +1,5 @@
 <template>
-<<<<<<< HEAD
 <div class="flex justify-center w-full h-screen">
-=======
->>>>>>> 3897a93a919b1f5f2959873860fbfdee8c7b944a
     <Card :header="priceInMarketTXT">
         <div class="w-full p-6 flex flex-col">
             <Input :label="marketNameTXT" />
@@ -13,21 +10,14 @@
             <BtnCancel @click="showAddMarket()"/>
         </div>
     </Card>
-<<<<<<< HEAD
         <Snack emoji="&#9888;" :text="errorSnackTxt" bgColor="bg-red-400" />
         <Snack :text="successMarketSnackTxt" bgColor="bg-green-400" />
 </div>
 </template>
 <script>
-import { mapMutations, mapState } from 'vuex'
+import { mapState } from 'vuex'
 
 import Snack from '../snack/snack.vue'
-=======
-</template>
-<script>
-import {mapMutations} from 'vuex'
-
->>>>>>> 3897a93a919b1f5f2959873860fbfdee8c7b944a
 import Input from '../forms/input.vue'
 import Card from './card.vue'
 import BtnSave from '../buttons/btnSave.vue'
@@ -40,22 +30,18 @@ export default {
         Input,
         BtnSave,
         BtnCancel,
-<<<<<<< HEAD
         Snack,
-=======
->>>>>>> 3897a93a919b1f5f2959873860fbfdee8c7b944a
 
     },
     data: () => ({
         priceInMarketTXT: 'Price in the Market',
-        marketNameTXT: 'MarketName',
-<<<<<<< HEAD
+        marketNameTXT: 'Market name',
         productPriceTXT: 'Product Price',
         errorSnackTxt: 'Type all datas',
         successMarketSnackTxt: 'Success! Market Added',
     }),
-    watch: {
-        LANGUAGE(){
+    methods: {
+        putLanguage(){
             if(this.LANGUAGE == 'en-US') {
                 this.priceInMarketTXT = this.TRANSLATE.priceInMarketTXT.EN
                 this.productPriceTXT = this.TRANSLATE.productPrice.EN
@@ -100,15 +86,16 @@ export default {
             }
         }
     },
+    watch: {
+        LANGUAGE(){
+            this.putLanguage()
+        }
+    },
+    mounted() {
+        this.putLanguage()
+    },
     computed: {
-        ...mapMutations(['showAddMarket']),
         ...mapState(['LANGUAGE', 'TRANSLATE'])
-=======
-        productPriceTXT: 'Product Price'
-    }),
-    computed: {
-        ...mapMutations(['showAddMarket'])
->>>>>>> 3897a93a919b1f5f2959873860fbfdee8c7b944a
     }
 }
 </script>

@@ -1,19 +1,10 @@
 <template>
-<<<<<<< HEAD
   <div @pointermove="axlesToDrag" class="w-screen h-screen">  
     <Header class="absolute" />
-      
-      <LogIn @click="toShowLanguagesFalse()" v-show="showLogin" />
-      <!--<RegisterPage @click="toShowLanguagesFalse()" v-show="showLogin" />-->
-      <!--<ForgotPassPage @click="toShowLanguagesFalse()" v-show="showLogin" />-->
-      
-      <div v-show="!showLogin">
-          <div class="overflow-hidden">
-              <MainPage @click="toShowLanguagesFalse()" v-show="!toShowAddProductPage" />
-              <AddPage @click="toShowLanguagesFalse()" v-show="toShowAddProductPage"/>
-          </div>
-        <CoinBtn @pointerdown="startDrag = true" @pointerup="startDrag = false" :style="[drag]" />
+      <div @click="toShowLanguagesFalse()" class="overflow-hidden">   
+        <router-view></router-view>
       </div>
+    <CoinBtn @pointerdown="startDrag = true" @pointerup="startDrag = false" :style="[drag]" />
   </div>
 </template>
 
@@ -23,34 +14,21 @@ import { mapState, mapMutations } from 'vuex'
 import Header from './components/layout/header.vue'
 //import RegisterPage from './pages/registerPage.vue'
 //import ForgotPassPage from './pages/forgotPassPage.vue'
-import LogIn from './pages/logIn.vue'
-import MainPage from './pages/main-page.vue'
-import AddPage from './pages/add-page.vue'
+//import LogIn from './pages/logIn.vue'
+//import MainPage from './views/main-page.vue'
+//import AddPage from './pages/add-page.vue'
 import CoinBtn from './components/buttons/coin-btn.vue'
-=======
-<div class="overflow-hidden">
-  <Header class="absolute" />
-    <MainPage v-if="toShowAddProductPage" />
-    <AddPage v-else/>
-</div>
-</template>
-
-<script>
-import { mapState } from 'vuex'
-
-import Header from './components/layout/header.vue'
-import MainPage from './pages/main-page.vue'
-import AddPage from './pages/add-page.vue'
->>>>>>> 3897a93a919b1f5f2959873860fbfdee8c7b944a
 
 export default {
   name: 'App',
   components: {
     Header,
-    MainPage,
-<<<<<<< HEAD
-    AddPage,
-    LogIn,
+    //MainPage,
+    //AddPage,
+    //LogIn,
+    //MainPage,
+    //AddPage,
+    //LogIn,
     CoinBtn,
     //RegisterPage,
     //ForgotPassPage,
@@ -82,13 +60,7 @@ export default {
         return {top: `${this.screenY}px`, left: `${this.screenX}px`}
       }
     },
-=======
-    AddPage
   },
-  computed: {
-    ...mapState(['toShowAddProductPage'])
->>>>>>> 3897a93a919b1f5f2959873860fbfdee8c7b944a
-  }
 }
 </script>
 
