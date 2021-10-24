@@ -282,10 +282,89 @@ LANGUAGE: 'english',
     ES: 'Entrando ...',
     CH: '进入 ...',
     KO: '입장 ...'
-  }
-
-
+  },
   
+  translating: {
+    login(scope) {
+      if(scope.LANGUAGE == 'en-US') {
+        scope.welcomeTXT = scope.TRANSLATE.welcome.EN
+        scope.userNameTXT = scope.TRANSLATE.userName.EN
+        scope.passwordTXT = scope.TRANSLATE.password.EN
+        scope.loginTXT = scope.TRANSLATE.login.EN
+        scope.newTXT = scope.TRANSLATE.new.EN
+        scope.forgotTXT = scope.TRANSLATE.forgot.EN
+        scope.typeAllDatasTXT = scope.TRANSLATE.errorText.EN
+        scope.successLoginTXT = scope.TRANSLATE.successLogin.EN
+      }
+      else if(scope.LANGUAGE == 'pt-BR') {
+          scope.welcomeTXT = scope.TRANSLATE.welcome.PT
+          scope.userNameTXT = scope.TRANSLATE.userName.PT
+          scope.passwordTXT = scope.TRANSLATE.password.PT
+          scope.loginTXT = scope.TRANSLATE.login.PT
+          scope.newTXT = scope.TRANSLATE.new.PT
+          scope.forgotTXT = scope.TRANSLATE.forgot.PT
+          scope.typeAllDatasTXT = scope.TRANSLATE.errorText.PT
+          scope.successLoginTXT = scope.TRANSLATE.successLogin.PT
+      }
+      else if(scope.LANGUAGE == 'es-ES') {
+          scope.welcomeTXT = scope.TRANSLATE.welcome.ES
+          scope.userNameTXT = scope.TRANSLATE.userName.ES
+          scope.passwordTXT = scope.TRANSLATE.password.ES
+          scope.loginTXT = scope.TRANSLATE.login.ES
+          scope.newTXT = scope.TRANSLATE.new.ES
+          scope.forgotTXT = scope.TRANSLATE.forgot.ES
+          scope.typeAllDatasTXT = scope.TRANSLATE.errorText.ES
+          scope.successLoginTXT = scope.TRANSLATE.successLogin.ES
+      }
+      else if(scope.LANGUAGE == 'ru') {
+          scope.welcomeTXT = scope.TRANSLATE.welcome.RU
+          scope.userNameTXT = scope.TRANSLATE.userName.RU
+          scope.passwordTXT = scope.TRANSLATE.password.RU
+          scope.loginTXT = scope.TRANSLATE.login.RU
+          scope.newTXT = scope.TRANSLATE.new.RU
+          scope.forgotTXT = scope.TRANSLATE.forgot.RU
+          scope.typeAllDatasTXT = scope.TRANSLATE.errorText.RU
+          scope.successLoginTXT = scope.TRANSLATE.successLogin.RU
+      }
+      else if(scope.LANGUAGE == 'ch') {
+          scope.welcomeTXT = scope.TRANSLATE.welcome.CH
+          scope.userNameTXT = scope.TRANSLATE.userName.CH
+          scope.passwordTXT = scope.TRANSLATE.password.CH
+          scope.loginTXT = scope.TRANSLATE.login.CH
+          scope.newTXT = scope.TRANSLATE.new.CH
+          scope.forgotTXT = scope.TRANSLATE.forgot.CH
+          scope.typeAllDatasTXT = scope.TRANSLATE.errorText.CH
+          scope.successLoginTXT = scope.TRANSLATE.successLogin.CH
+      }
+      else if(scope.LANGUAGE == 'ko') {
+          scope.welcomeTXT = scope.TRANSLATE.welcome.KO
+          scope.userNameTXT = scope.TRANSLATE.userName.KO
+          scope.passwordTXT = scope.TRANSLATE.password.KO
+          scope.loginTXT = scope.TRANSLATE.login.KO
+          scope.newTXT = scope.TRANSLATE.new.KO
+          scope.forgotTXT = scope.TRANSLATE.forgot.KO
+          scope.typeAllDatasTXT = scope.TRANSLATE.errorText.KO
+          scope.successLoginTXT = scope.TRANSLATE.successLogin.KO
+      }
+    }
+  }  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
 
 export default translateAPP

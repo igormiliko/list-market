@@ -50,9 +50,7 @@ export default {
     }),
     methods: {
         ...mapMutations(['toShowLogin']),
-    },
-    watch: {
-        LANGUAGE(){
+        putLanguage(){
             if(this.LANGUAGE == 'en-US') {
                 this.recoverPassTXT = this.TRANSLATE.recoverPass.EN
                 this.emailTXT = this.TRANSLATE.email.EN
@@ -102,6 +100,14 @@ export default {
                 this.successForgotPassTXT = this.TRANSLATE.successRecoveryPass.KO
                 this.errorForgotPassTXT = this.TRANSLATE.errorText.KO
             }
+        }
+    },
+    mounted() {
+        this.putLanguage()
+    },
+    watch: {
+        LANGUAGE(){
+            this.putLanguage()
         }
     },
     computed: {

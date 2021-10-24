@@ -11,8 +11,8 @@ export default {
     data: () => ({
         saveBtn: 'Save'
     }),
-    watch: {
-        LANGUAGE() {
+    methods: {
+        putLanguage() {
                 if(this.LANGUAGE == 'en-US') {
                     this.saveBtn = this.TRANSLATE.saveBtn.EN
                 }
@@ -32,6 +32,14 @@ export default {
                     this.saveBtn = this.TRANSLATE.saveBtn.KO
                 }
             }
+    },
+    watch: {
+        LANGUAGE(){
+            this.putLanguage()
+        }
+    },
+    mounted() {
+        this.putLanguage()
     },
     computed: {
         ...mapState(['LANGUAGE', 'TRANSLATE'])

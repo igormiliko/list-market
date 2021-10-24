@@ -23,7 +23,9 @@ const store = createStore({
     toShowLanguagesTrue(state){
       state.showLanguages = true
     },
-
+    toShowLanguagesFalse(state){
+      state.showLanguages = false
+    },
   }
 })
 

@@ -36,8 +36,8 @@ export default {
         exampleItem: '1kg of Banana',
         currency: '$',
     }),
-    watch: {
-        LANGUAGE() {
+    methods: {
+        putLanguage() {
             if(this.LANGUAGE == 'en-US') {
                 this.productName = this.TRANSLATE.productName.EN
                 this.productPrice = this.TRANSLATE.productPrice.EN
@@ -63,6 +63,14 @@ export default {
                 this.productPrice = this.TRANSLATE.productPrice.KO
             }
         }
+    },
+    watch: {
+        LANGUAGE(){
+            this.putLanguage()
+        }
+    },
+    mounted() {
+        this.putLanguage()
     },
     computed: {
         ...mapState(['LANGUAGE', 'TRANSLATE', 'toShowAddProductPage'])

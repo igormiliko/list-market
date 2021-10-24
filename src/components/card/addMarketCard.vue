@@ -35,13 +35,13 @@ export default {
     },
     data: () => ({
         priceInMarketTXT: 'Price in the Market',
-        marketNameTXT: 'MarketName',
+        marketNameTXT: 'Market name',
         productPriceTXT: 'Product Price',
         errorSnackTxt: 'Type all datas',
         successMarketSnackTxt: 'Success! Market Added',
     }),
-    watch: {
-        LANGUAGE(){
+    methods: {
+        putLanguage(){
             if(this.LANGUAGE == 'en-US') {
                 this.priceInMarketTXT = this.TRANSLATE.priceInMarketTXT.EN
                 this.productPriceTXT = this.TRANSLATE.productPrice.EN
@@ -85,6 +85,14 @@ export default {
                 this.successMarketSnackTxt = this.TRANSLATE.productMarketAddedTXT.KO
             }
         }
+    },
+    watch: {
+        LANGUAGE(){
+            this.putLanguage()
+        }
+    },
+    mounted() {
+        this.putLanguage()
     },
     computed: {
         ...mapMutations(['showAddMarket']),

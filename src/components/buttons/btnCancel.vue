@@ -11,8 +11,8 @@ export default {
     data: () => ({
         cancelBtn: 'Cancel'
     }),
-    watch: {
-        LANGUAGE() {
+    methods: {
+        putLanguage() {
                 if(this.LANGUAGE == 'en-US') {
                     this.cancelBtn = this.TRANSLATE.cancelBtn.EN
                 }
@@ -32,6 +32,14 @@ export default {
                     this.cancelBtn = this.TRANSLATE.cancelBtn.KO
                 }
             }
+    },
+    watch: {
+        LANGUAGE(){
+            this.putLanguage()
+        }
+    },
+    mounted() {
+        this.putLanguage()
     },
     computed: {
         ...mapState(['LANGUAGE', 'TRANSLATE'])

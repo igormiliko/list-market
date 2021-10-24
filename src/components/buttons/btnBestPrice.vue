@@ -21,10 +21,8 @@ export default {
     methods: {
         debug(){
             console.log(this.LANGUAGE)
-        }
-    },
-    watch: {
-        LANGUAGE() {
+        },
+        putLanguage() {
             if(this.LANGUAGE == 'en-US') {
                 this.bestPriceTXT = this.TRANSLATE.bestPriceTXT.EN
             }
@@ -44,6 +42,14 @@ export default {
                 this.bestPriceTXT = this.TRANSLATE.bestPriceTXT.KO
             }
         }
+    },
+    watch: {
+        LANGUAGE(){
+            this.putLanguage()
+        }
+    },
+    mounted() {
+        this.putLanguage()
     },
     computed: {
         ...mapState(['LANGUAGE', 'TRANSLATE'])

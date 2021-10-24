@@ -16,8 +16,8 @@ export default {
     data: () => ({
         noItems: 'No Items!',
     }),
-    watch: {
-        LANGUAGE(){
+    methods: {
+        putLanguage(){
             if(this.LANGUAGE == 'en-US') {
                 this.noItems = this.TRANSLATE.table.noItems.EN
             }
@@ -37,6 +37,14 @@ export default {
                 this.noItems = this.TRANSLATE.table.noItems.KO
             }
         }
+    },
+    watch: {
+        LANGUAGE(){
+            this.putLanguage()
+        }
+    },
+    mounted() {
+        this.putLanguage()
     },
     computed: {
         ...mapState(['LANGUAGE', 'TRANSLATE']),

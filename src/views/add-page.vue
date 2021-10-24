@@ -8,7 +8,7 @@
     </div>
 </template>
 <script>
-import { mapState } from 'vuex'
+import {  mapState } from 'vuex'
 
 import Snack from '../components/snack/snack.vue'
 import Card from '../components/card/card.vue'
@@ -26,8 +26,8 @@ export default {
         typeAllDatasTxt: 'Type all datas',
         successSnackTxt: 'Success! Product Added'
     }),
-    watch: {
-        LANGUAGE() {
+    methods: {
+        putLanguage() {
             if(this.LANGUAGE == 'en-US') {
                 this.cardHeader = this.TRANSLATE.addingProduct.EN
                 this.typeAllDatasTxt = this.TRANSLATE.errorText.EN
@@ -58,6 +58,14 @@ export default {
                 this.typeAllDatasTxt = this.TRANSLATE.errorText.KO
                 this.successSnackTxt = this.TRANSLATE.productAddedTXT.KO
             }
+        }
+    },
+    mounted(){
+        this.putLanguage()
+    },
+    watch: {
+        LANGUAGE(){
+            this.putLanguage()
         }
     },
     computed: {

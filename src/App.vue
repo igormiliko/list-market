@@ -1,19 +1,10 @@
 <template>
   <div @pointermove="axlesToDrag" class="w-screen h-screen">  
     <Header class="absolute" />
-      
-      <LogIn @click="toShowLanguagesFalse()" v-show="showLogin" />
-      <!--<RegisterPage @click="toShowLanguagesFalse()" v-show="showLogin" />-->
-      <!--<ForgotPassPage @click="toShowLanguagesFalse()" v-show="showLogin" />-->
-      
-      <div v-show="!showLogin">
-          <div class="overflow-hidden">
-              <!--<MainPage @click="toShowLanguagesFalse()" v-show="!toShowAddProductPage" />
-              <AddPage @click="toShowLanguagesFalse()" v-show="toShowAddProductPage"/>-->
-              <router-view></router-view>
-          </div>
-        <CoinBtn @pointerdown="startDrag = true" @pointerup="startDrag = false" :style="[drag]" />
+      <div @click="toShowLanguagesFalse()" class="overflow-hidden">   
+        <router-view></router-view>
       </div>
+    <CoinBtn @pointerdown="startDrag = true" @pointerup="startDrag = false" :style="[drag]" />
   </div>
 </template>
 

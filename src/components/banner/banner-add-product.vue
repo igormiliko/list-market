@@ -26,10 +26,8 @@ export default {
             console.log(this.addAproduct)
             this.addAproduct = 'Hi'
             console.log(this.addAproduct)
-        }
-    },
-    watch: {
-        LANGUAGE(){
+        },
+        putLanguage(){
             this.LANGUAGE == 'en-US' ? this.addProduct = this.TRANSLATE.addProduct.EN :
             this.LANGUAGE == 'pt-BR' ? this.addProduct = this.TRANSLATE.addProduct.PT :
             this.LANGUAGE == 'es-ES' ? this.addProduct = this.TRANSLATE.addProduct.ES :
@@ -38,6 +36,14 @@ export default {
             this.LANGUAGE == 'ko' ? this.addProduct = this.TRANSLATE.addProduct.KO :
             this.addProduct = this.TRANSLATE.addProduct.EN
       }
+    },
+    watch: {
+        LANGUAGE(){
+            this.putLanguage()
+        }
+    },
+    mounted() {
+        this.putLanguage()
     },
     computed: {
         ...mapState(['LANGUAGE', 'TRANSLATE']),

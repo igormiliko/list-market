@@ -65,9 +65,7 @@ export default {
     }),
     methods: {
         ...mapMutations(['toShowLogin', 'toShowForgot', 'toShowRegister']),
-    },
-    watch: {
-        LANGUAGE(){
+        putLanguage(){
             if(this.LANGUAGE == 'en-US') {
                 this.welcomeTXT = this.TRANSLATE.welcome.EN
                 this.userNameTXT = this.TRANSLATE.userName.EN
@@ -129,6 +127,14 @@ export default {
                 this.successLoginTXT = this.TRANSLATE.successLogin.KO
             }
         }
+    },
+    mounted() {
+        this.putLanguage()
+    },
+    watch: {
+       LANGUAGE(){
+        this.putLanguage()
+       }
     },
     computed: {
         ...mapState(['TRANSLATE', 'LANGUAGE'])
