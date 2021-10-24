@@ -66,66 +66,7 @@ export default {
     methods: {
         ...mapMutations(['toShowLogin', 'toShowForgot', 'toShowRegister']),
         putLanguage(){
-            if(this.LANGUAGE == 'en-US') {
-                this.welcomeTXT = this.TRANSLATE.welcome.EN
-                this.userNameTXT = this.TRANSLATE.userName.EN
-                this.passwordTXT = this.TRANSLATE.password.EN
-                this.loginTXT = this.TRANSLATE.login.EN
-                this.newTXT = this.TRANSLATE.new.EN
-                this.forgotTXT = this.TRANSLATE.forgot.EN
-                this.typeAllDatasTXT = this.TRANSLATE.errorText.EN
-                this.successLoginTXT = this.TRANSLATE.successLogin.EN
-            }
-            else if(this.LANGUAGE == 'pt-BR') {
-                this.welcomeTXT = this.TRANSLATE.welcome.PT
-                this.userNameTXT = this.TRANSLATE.userName.PT
-                this.passwordTXT = this.TRANSLATE.password.PT
-                this.loginTXT = this.TRANSLATE.login.PT
-                this.newTXT = this.TRANSLATE.new.PT
-                this.forgotTXT = this.TRANSLATE.forgot.PT
-                this.typeAllDatasTXT = this.TRANSLATE.errorText.PT
-                this.successLoginTXT = this.TRANSLATE.successLogin.PT
-            }
-             else if(this.LANGUAGE == 'es-ES') {
-                this.welcomeTXT = this.TRANSLATE.welcome.ES
-                this.userNameTXT = this.TRANSLATE.userName.ES
-                this.passwordTXT = this.TRANSLATE.password.ES
-                this.loginTXT = this.TRANSLATE.login.ES
-                this.newTXT = this.TRANSLATE.new.ES
-                this.forgotTXT = this.TRANSLATE.forgot.ES
-                this.typeAllDatasTXT = this.TRANSLATE.errorText.ES
-                this.successLoginTXT = this.TRANSLATE.successLogin.ES
-            }
-             else if(this.LANGUAGE == 'ru') {
-                this.welcomeTXT = this.TRANSLATE.welcome.RU
-                this.userNameTXT = this.TRANSLATE.userName.RU
-                this.passwordTXT = this.TRANSLATE.password.RU
-                this.loginTXT = this.TRANSLATE.login.RU
-                this.newTXT = this.TRANSLATE.new.RU
-                this.forgotTXT = this.TRANSLATE.forgot.RU
-                this.typeAllDatasTXT = this.TRANSLATE.errorText.RU
-                this.successLoginTXT = this.TRANSLATE.successLogin.RU
-            }
-             else if(this.LANGUAGE == 'ch') {
-                this.welcomeTXT = this.TRANSLATE.welcome.CH
-                this.userNameTXT = this.TRANSLATE.userName.CH
-                this.passwordTXT = this.TRANSLATE.password.CH
-                this.loginTXT = this.TRANSLATE.login.CH
-                this.newTXT = this.TRANSLATE.new.CH
-                this.forgotTXT = this.TRANSLATE.forgot.CH
-                this.typeAllDatasTXT = this.TRANSLATE.errorText.CH
-                this.successLoginTXT = this.TRANSLATE.successLogin.CH
-            }
-             else if(this.LANGUAGE == 'ko') {
-                this.welcomeTXT = this.TRANSLATE.welcome.KO
-                this.userNameTXT = this.TRANSLATE.userName.KO
-                this.passwordTXT = this.TRANSLATE.password.KO
-                this.loginTXT = this.TRANSLATE.login.KO
-                this.newTXT = this.TRANSLATE.new.KO
-                this.forgotTXT = this.TRANSLATE.forgot.KO
-                this.typeAllDatasTXT = this.TRANSLATE.errorText.KO
-                this.successLoginTXT = this.TRANSLATE.successLogin.KO
-            }
+            this.TRANSLATE.translating.login(this)
         }
     },
     mounted() {
