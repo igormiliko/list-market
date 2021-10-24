@@ -34,6 +34,7 @@ LANGUAGE: 'english',
       CH: '价钱',
       KO: '가격'
     },
+<<<<<<< HEAD
     marketCol: {
       EN: 'Market',
       PT: 'Mercado',
@@ -42,6 +43,8 @@ LANGUAGE: 'english',
       CH: '市场',
       KO: '시장'
     },
+=======
+>>>>>>> 3897a93a919b1f5f2959873860fbfdee8c7b944a
     noItems: {
       EN: 'No items!',
       PT: 'Sem items!',
@@ -79,7 +82,11 @@ LANGUAGE: 'english',
     EN: '$',
     PT: 'R$',
     RU: '₽',
+<<<<<<< HEAD
     ES: '€',
+=======
+    ES: '$',
+>>>>>>> 3897a93a919b1f5f2959873860fbfdee8c7b944a
     CH: '¥',
     KO: '₩'
   },
@@ -139,6 +146,7 @@ LANGUAGE: 'english',
     CH: '成功！产品添加',
     KO: '성공! 추가된 제품'
   },
+<<<<<<< HEAD
   productMarketAddedTXT: {
     EN: 'Success! Market Added',
     PT: 'Mercado adicionado!',
@@ -147,6 +155,8 @@ LANGUAGE: 'english',
     CH: '成功！市场增加',
     KO: '성공! 시장 추가됨'
   },
+=======
+>>>>>>> 3897a93a919b1f5f2959873860fbfdee8c7b944a
   errorText: {
     EN: 'Type all Datas',
     PT: 'Digite todos os dados',
@@ -171,6 +181,7 @@ LANGUAGE: 'english',
     CH: '全部的',
     KO: '총'
   },
+<<<<<<< HEAD
   welcome: {
     EN: 'Welcome',
     PT: 'Bem vindo',
@@ -284,6 +295,8 @@ LANGUAGE: 'english',
     KO: '입장 ...'
   }
 
+=======
+>>>>>>> 3897a93a919b1f5f2959873860fbfdee8c7b944a
 
   
 }

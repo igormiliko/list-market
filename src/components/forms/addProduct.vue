@@ -9,7 +9,11 @@
             <BtnSave />
             <BtnCancel @click="alternatePage()" />
         </div>
+<<<<<<< HEAD
     </form>
+=======
+        </form>
+>>>>>>> 3897a93a919b1f5f2959873860fbfdee8c7b944a
 </template>
 <script>
 import { mapState, mapMutations } from 'vuex'
