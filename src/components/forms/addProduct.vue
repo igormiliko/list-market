@@ -5,14 +5,20 @@
            <Input :label="productPrice" :placeholder="currency+currency+currency" />
         </div>
 
-        <div class="flex justify-around">
-            <BtnSave />
-            <BtnCancel @click="alternatePage()" />
+        <div class="w-full flex justify-around">
+            <router-link to="/">
+                <BtnSave />
+            </router-link>
+          
+            <router-link to="/">
+                <BtnCancel />
+            </router-link>
+
         </div>
     </form>
 </template>
 <script>
-import { mapState, mapMutations } from 'vuex'
+import { mapState } from 'vuex'
 import Input from './input.vue'
 import BtnSave from '../buttons/btnSave.vue'
 import BtnCancel from '../buttons/btnCancel.vue'
@@ -30,10 +36,6 @@ export default {
         exampleItem: '1kg of Banana',
         currency: '$',
     }),
-    methods: {
-        ...mapMutations(['alternatePage'])
-    },
-
     watch: {
         LANGUAGE() {
             if(this.LANGUAGE == 'en-US') {

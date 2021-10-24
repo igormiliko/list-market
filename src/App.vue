@@ -8,8 +8,9 @@
       
       <div v-show="!showLogin">
           <div class="overflow-hidden">
-              <MainPage @click="toShowLanguagesFalse()" v-show="!toShowAddProductPage" />
-              <AddPage @click="toShowLanguagesFalse()" v-show="toShowAddProductPage"/>
+              <!--<MainPage @click="toShowLanguagesFalse()" v-show="!toShowAddProductPage" />
+              <AddPage @click="toShowLanguagesFalse()" v-show="toShowAddProductPage"/>-->
+              <router-view></router-view>
           </div>
         <CoinBtn @pointerdown="startDrag = true" @pointerup="startDrag = false" :style="[drag]" />
       </div>
@@ -22,18 +23,18 @@ import { mapState, mapMutations } from 'vuex'
 import Header from './components/layout/header.vue'
 //import RegisterPage from './pages/registerPage.vue'
 //import ForgotPassPage from './pages/forgotPassPage.vue'
-import LogIn from './pages/logIn.vue'
-import MainPage from './pages/main-page.vue'
-import AddPage from './pages/add-page.vue'
+//import LogIn from './pages/logIn.vue'
+//import MainPage from './views/main-page.vue'
+//import AddPage from './pages/add-page.vue'
 import CoinBtn from './components/buttons/coin-btn.vue'
 
 export default {
   name: 'App',
   components: {
     Header,
-    MainPage,
-    AddPage,
-    LogIn,
+    //MainPage,
+    //AddPage,
+    //LogIn,
     CoinBtn,
     //RegisterPage,
     //ForgotPassPage,
