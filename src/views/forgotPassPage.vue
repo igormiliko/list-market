@@ -51,55 +51,7 @@ export default {
     methods: {
         ...mapMutations(['toShowLogin']),
         putLanguage(){
-            if(this.LANGUAGE == 'en-US') {
-                this.recoverPassTXT = this.TRANSLATE.recoverPass.EN
-                this.emailTXT = this.TRANSLATE.email.EN
-                this.phoneTXT = this.TRANSLATE.phone.EN
-                this.newTXT = this.TRANSLATE.new.EN
-                this.successForgotPassTXT = this.TRANSLATE.successRecoveryPass.EN
-                this.errorForgotPassTXT = this.TRANSLATE.errorText.EN
-            }
-            else if(this.LANGUAGE == 'pt-BR') {
-                this.recoverPassTXT = this.TRANSLATE.recoverPass.PT
-                this.emailTXT = this.TRANSLATE.email.PT
-                this.phoneTXT = this.TRANSLATE.phone.PT
-                this.newTXT = this.TRANSLATE.new.PT
-                this.successForgotPassTXT = this.TRANSLATE.successRecoveryPass.PT
-                this.errorForgotPassTXT = this.TRANSLATE.errorText.PT
-
-            }
-             else if(this.LANGUAGE == 'es-ES') {
-                this.recoverPassTXT = this.TRANSLATE.recoverPass.ES
-                this.emailTXT = this.TRANSLATE.email.ES
-                this.phoneTXT = this.TRANSLATE.phone.ES
-                this.newTXT = this.TRANSLATE.new.ES
-                this.successForgotPassTXT = this.TRANSLATE.successRecoveryPass.ES
-                this.errorForgotPassTXT = this.TRANSLATE.errorText.ES
-            }
-             else if(this.LANGUAGE == 'ru') {
-                this.recoverPassTXT = this.TRANSLATE.recoverPass.RU
-                this.emailTXT = this.TRANSLATE.email.RU
-                this.phoneTXT = this.TRANSLATE.phone.RU
-                this.newTXT = this.TRANSLATE.new.RU
-                this.successForgotPassTXT = this.TRANSLATE.successRecoveryPass.RU
-                this.errorForgotPassTXT = this.TRANSLATE.errorText.RU
-            }
-             else if(this.LANGUAGE == 'ch') {
-                this.recoverPassTXT = this.TRANSLATE.recoverPass.CH
-                this.emailTXT = this.TRANSLATE.email.CH
-                this.phoneTXT = this.TRANSLATE.phone.CH
-                this.newTXT = this.TRANSLATE.new.CH
-                this.successForgotPassTXT = this.TRANSLATE.successRecoveryPass.CH
-                this.errorForgotPassTXT = this.TRANSLATE.errorText.CH
-            }
-             else if(this.LANGUAGE == 'ko') {
-                this.recoverPassTXT = this.TRANSLATE.recoverPass.KO
-                this.emailTXT = this.TRANSLATE.email.KO
-                this.phoneTXT = this.TRANSLATE.phone.KO
-                this.newTXT = this.TRANSLATE.new.KO
-                this.successForgotPassTXT = this.TRANSLATE.successRecoveryPass.KO
-                this.errorForgotPassTXT = this.TRANSLATE.errorText.KO
-            }
+            this.TRANSLATE.translating.forgotPassPage(this)
         }
     },
     mounted() {

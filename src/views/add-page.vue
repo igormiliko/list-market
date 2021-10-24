@@ -28,36 +28,7 @@ export default {
     }),
     methods: {
         putLanguage() {
-            if(this.LANGUAGE == 'en-US') {
-                this.cardHeader = this.TRANSLATE.addingProduct.EN
-                this.typeAllDatasTxt = this.TRANSLATE.errorText.EN
-                this.successSnackTxt = this.TRANSLATE.productAddedTXT.EN
-            }
-            else if(this.LANGUAGE == 'pt-BR') {
-                this.cardHeader = this.TRANSLATE.addingProduct.PT
-                this.typeAllDatasTxt = this.TRANSLATE.errorText.PT
-                this.successSnackTxt = this.TRANSLATE.productAddedTXT.PT
-            }
-             else if(this.LANGUAGE == 'es-ES') {
-                this.cardHeader = this.TRANSLATE.addingProduct.ES
-                this.typeAllDatasTxt = this.TRANSLATE.errorText.ES
-                this.successSnackTxt = this.TRANSLATE.productAddedTXT.ES
-            }
-             else if(this.LANGUAGE == 'ru') {
-                this.cardHeader = this.TRANSLATE.addingProduct.RU
-                this.typeAllDatasTxt = this.TRANSLATE.errorText.RU
-                this.successSnackTxt = this.TRANSLATE.productAddedTXT.RU
-            }
-             else if(this.LANGUAGE == 'ch') {
-                this.cardHeader = this.TRANSLATE.addingProduct.CH
-                this.typeAllDatasTxt = this.TRANSLATE.errorText.CH
-                this.successSnackTxt = this.TRANSLATE.productAddedTXT.CH
-            }
-             else if(this.LANGUAGE == 'ko') {
-                this.cardHeader = this.TRANSLATE.addingProduct.KO
-                this.typeAllDatasTxt = this.TRANSLATE.errorText.KO
-                this.successSnackTxt = this.TRANSLATE.productAddedTXT.KO
-            }
+            this.TRANSLATE.translating.addPage(this)
         }
     },
     mounted(){

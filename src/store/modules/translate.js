@@ -83,14 +83,6 @@ LANGUAGE: 'english',
     CH: '¥',
     KO: '₩'
   },
-  exampleItem: {
-    EN: '1kg of banana',
-    PT: '1kg de banana',
-    RU: '1 кг банана',
-    ES: '1 kg de plátano',
-    CH: '1公斤香蕉',
-    KO: '바나나 1kg'
-  },
   saveBtn: {
     EN: 'Save',
     PT: 'Salvar',
@@ -283,8 +275,103 @@ LANGUAGE: 'english',
     CH: '进入 ...',
     KO: '입장 ...'
   },
+  exampleItem: {
+    EN: '1lb of Banana',
+    PT: '1kg de Banana',
+    RU: '1 кг банана',
+    ES: '1kg de Plátano',
+    CH: '1公斤香蕉',
+    KO: '바나나 1킬로'
+  },
   
   translating: {
+    
+    
+    addPage(scope) {
+      if(scope.LANGUAGE == 'en-US') {
+        scope.cardHeader = scope.TRANSLATE.addingProduct.EN
+          scope.typeAllDatasTxt = scope.TRANSLATE.errorText.EN
+          scope.successSnackTxt = scope.TRANSLATE.productAddedTXT.EN
+      }
+      else if(scope.LANGUAGE == 'pt-BR') {
+          scope.cardHeader = scope.TRANSLATE.addingProduct.PT
+          scope.typeAllDatasTxt = scope.TRANSLATE.errorText.PT
+          scope.successSnackTxt = scope.TRANSLATE.productAddedTXT.PT
+      }
+      else if(scope.LANGUAGE == 'es-ES') {
+          scope.cardHeader = scope.TRANSLATE.addingProduct.ES
+          scope.typeAllDatasTxt = scope.TRANSLATE.errorText.ES
+          scope.successSnackTxt = scope.TRANSLATE.productAddedTXT.ES
+        }
+        else if(scope.LANGUAGE == 'ru') {
+          scope.cardHeader = scope.TRANSLATE.addingProduct.RU
+          scope.typeAllDatasTxt = scope.TRANSLATE.errorText.RU
+          scope.successSnackTxt = scope.TRANSLATE.productAddedTXT.RU
+        }
+        else if(scope.LANGUAGE == 'ch') {
+          scope.cardHeader = scope.TRANSLATE.addingProduct.CH
+          scope.typeAllDatasTxt = scope.TRANSLATE.errorText.CH
+          scope.successSnackTxt = scope.TRANSLATE.productAddedTXT.CH
+      }
+      else if(scope.LANGUAGE == 'ko') {
+          scope.cardHeader = scope.TRANSLATE.addingProduct.KO
+          scope.typeAllDatasTxt = scope.TRANSLATE.errorText.KO
+          scope.successSnackTxt = scope.TRANSLATE.productAddedTXT.KO
+      }
+    },
+    
+    forgotPassPage(scope) {
+      if(scope.LANGUAGE == 'en-US') {
+        scope.recoverPassTXT = scope.TRANSLATE.recoverPass.EN
+        scope.emailTXT = scope.TRANSLATE.email.EN
+        scope.phoneTXT = scope.TRANSLATE.phone.EN
+        scope.newTXT = scope.TRANSLATE.new.EN
+        scope.successForgotPassTXT = scope.TRANSLATE.successRecoveryPass.EN
+        scope.errorForgotPassTXT = scope.TRANSLATE.errorText.EN
+      }
+      else if(scope.LANGUAGE == 'pt-BR') {
+          scope.recoverPassTXT = scope.TRANSLATE.recoverPass.PT
+          scope.emailTXT = scope.TRANSLATE.email.PT
+          scope.phoneTXT = scope.TRANSLATE.phone.PT
+          scope.newTXT = scope.TRANSLATE.new.PT
+          scope.successForgotPassTXT = scope.TRANSLATE.successRecoveryPass.PT
+          scope.errorForgotPassTXT = scope.TRANSLATE.errorText.PT
+
+      }
+      else if(scope.LANGUAGE == 'es-ES') {
+          scope.recoverPassTXT = scope.TRANSLATE.recoverPass.ES
+          scope.emailTXT = scope.TRANSLATE.email.ES
+          scope.phoneTXT = scope.TRANSLATE.phone.ES
+          scope.newTXT = scope.TRANSLATE.new.ES
+          scope.successForgotPassTXT = scope.TRANSLATE.successRecoveryPass.ES
+          scope.errorForgotPassTXT = scope.TRANSLATE.errorText.ES
+      }
+      else if(scope.LANGUAGE == 'ru') {
+        scope.recoverPassTXT = scope.TRANSLATE.recoverPass.RU
+          scope.emailTXT = scope.TRANSLATE.email.RU
+          scope.phoneTXT = scope.TRANSLATE.phone.RU
+          scope.newTXT = scope.TRANSLATE.new.RU
+          scope.successForgotPassTXT = scope.TRANSLATE.successRecoveryPass.RU
+          scope.errorForgotPassTXT = scope.TRANSLATE.errorText.RU
+      }
+      else if(scope.LANGUAGE == 'ch') {
+          scope.recoverPassTXT = scope.TRANSLATE.recoverPass.CH
+          scope.emailTXT = scope.TRANSLATE.email.CH
+          scope.phoneTXT = scope.TRANSLATE.phone.CH
+          scope.newTXT = scope.TRANSLATE.new.CH
+          scope.successForgotPassTXT = scope.TRANSLATE.successRecoveryPass.CH
+          scope.errorForgotPassTXT = scope.TRANSLATE.errorText.CH
+      }
+      else if(scope.LANGUAGE == 'ko') {
+          scope.recoverPassTXT = scope.TRANSLATE.recoverPass.KO
+          scope.emailTXT = scope.TRANSLATE.email.KO
+          scope.phoneTXT = scope.TRANSLATE.phone.KO
+          scope.newTXT = scope.TRANSLATE.new.KO
+          scope.successForgotPassTXT = scope.TRANSLATE.successRecoveryPass.KO
+          scope.errorForgotPassTXT = scope.TRANSLATE.errorText.KO
+        }
+    },
+
     login(scope) {
       if(scope.LANGUAGE == 'en-US') {
         scope.welcomeTXT = scope.TRANSLATE.welcome.EN
@@ -346,18 +433,175 @@ LANGUAGE: 'english',
           scope.typeAllDatasTXT = scope.TRANSLATE.errorText.KO
           scope.successLoginTXT = scope.TRANSLATE.successLogin.KO
       }
+    },
+    registerPage(scope){
+      if(scope.LANGUAGE == 'en-US') {
+        scope.registerTXT = scope.TRANSLATE.register.EN
+        scope.userNameTXT = scope.TRANSLATE.userName.EN
+        scope.emailTXT = scope.TRANSLATE.email.EN
+        scope.phoneTXT = scope.TRANSLATE.phone.EN
+        scope.passwordTXT = scope.TRANSLATE.password.EN
+        scope.confirmPasswordTXT = scope.TRANSLATE.confirmPassword.EN
+        scope.newTXT = scope.TRANSLATE.new.EN
+        scope.forgotTXT = scope.TRANSLATE.forgot.EN
+        scope.typeAllDatasTXT = scope.TRANSLATE.errorText.EN
+        scope.successRegisterTXT = scope.TRANSLATE.successRegister.EN
+      }
+      else if(scope.LANGUAGE == 'pt-BR') {
+          scope.registerTXT = scope.TRANSLATE.register.PT
+          scope.userNameTXT = scope.TRANSLATE.userName.PT
+          scope.emailTXT = scope.TRANSLATE.email.PT
+          scope.phoneTXT = scope.TRANSLATE.phone.PT
+          scope.passwordTXT = scope.TRANSLATE.password.PT
+          scope.confirmPasswordTXT = scope.TRANSLATE.confirmPassword.PT
+          scope.newTXT = scope.TRANSLATE.new.PT
+          scope.forgotTXT = scope.TRANSLATE.forgot.PT
+          scope.typeAllDatasTXT = scope.TRANSLATE.errorText.PT
+          scope.successRegisterTXT = scope.TRANSLATE.successRegister.PT
+
+      }
+      else if(scope.LANGUAGE == 'es-ES') {
+          scope.registerTXT = scope.TRANSLATE.register.ES
+          scope.userNameTXT = scope.TRANSLATE.userName.ES
+          scope.emailTXT = scope.TRANSLATE.email.ES
+          scope.phoneTXT = scope.TRANSLATE.phone.ES
+          scope.passwordTXT = scope.TRANSLATE.password.ES
+          scope.confirmPasswordTXT = scope.TRANSLATE.confirmPassword.ES
+          scope.newTXT = scope.TRANSLATE.new.ES
+          scope.forgotTXT = scope.TRANSLATE.forgot.ES
+          scope.typeAllDatasTXT = scope.TRANSLATE.errorText.ES
+          scope.successRegisterTXT = scope.TRANSLATE.successRegister.ES
+      }
+      else if(scope.LANGUAGE == 'ru') {
+          scope.registerTXT = scope.TRANSLATE.register.RU
+          scope.userNameTXT = scope.TRANSLATE.userName.RU
+          scope.emailTXT = scope.TRANSLATE.email.RU
+          scope.phoneTXT = scope.TRANSLATE.phone.RU
+          scope.passwordTXT = scope.TRANSLATE.password.RU
+          scope.confirmPasswordTXT = scope.TRANSLATE.confirmPassword.RU
+          scope.newTXT = scope.TRANSLATE.new.RU
+          scope.forgotTXT = scope.TRANSLATE.forgot.RU
+          scope.typeAllDatasTXT = scope.TRANSLATE.errorText.RU
+          scope.successRegisterTXT = scope.TRANSLATE.successRegister.RU
+      }
+      else if(scope.LANGUAGE == 'ch') {
+          scope.registerTXT = scope.TRANSLATE.register.CH
+          scope.userNameTXT = scope.TRANSLATE.userName.CH
+          scope.emailTXT = scope.TRANSLATE.email.CH
+          scope.phoneTXT = scope.TRANSLATE.phone.CH
+          scope.passwordTXT = scope.TRANSLATE.password.CH
+          scope.confirmPasswordTXT = scope.TRANSLATE.confirmPassword.CH
+          scope.newTXT = scope.TRANSLATE.new.CH
+          scope.forgotTXT = scope.TRANSLATE.forgot.CH
+          scope.typeAllDatasTXT = scope.TRANSLATE.errorText.CH
+          scope.successRegisterTXT = scope.TRANSLATE.successRegister.CH
+      }
+      else if(scope.LANGUAGE == 'ko') {
+          scope.registerTXT = scope.TRANSLATE.register.KO
+          scope.userNameTXT = scope.TRANSLATE.userName.KO
+          scope.emailTXT = scope.TRANSLATE.email.KO
+          scope.phoneTXT = scope.TRANSLATE.phone.KO
+          scope.passwordTXT = scope.TRANSLATE.password.KO
+          scope.confirmPasswordTXT = scope.TRANSLATE.confirmPassword.KO
+          scope.newTXT = scope.TRANSLATE.new.KO
+          scope.forgotTXT = scope.TRANSLATE.forgot.KO
+          scope.typeAllDatasTXT = scope.TRANSLATE.errorText.KO
+          scope.successRegisterTXT = scope.TRANSLATE.successRegister.KO
+      }
+    },
+    addMarketCard(scope) {
+      if(scope.LANGUAGE == 'en-US') {
+        scope.priceInMarketTXT = scope.TRANSLATE.priceInMarketTXT.EN
+        scope.productPriceTXT = scope.TRANSLATE.productPrice.EN
+        scope.marketNameTXT = scope.TRANSLATE.marketNameTXT.EN
+        scope.errorSnackTxt = scope.TRANSLATE.errorText.EN
+        scope.successMarketSnackTxt = scope.TRANSLATE.productMarketAddedTXT.EN
+      }
+      else if(scope.LANGUAGE == 'pt-BR') {
+          scope.priceInMarketTXT = scope.TRANSLATE.priceInMarketTXT.PT
+          scope.productPriceTXT = scope.TRANSLATE.productPrice.PT
+          scope.marketNameTXT = scope.TRANSLATE.marketNameTXT.PT
+          scope.errorSnackTxt = scope.TRANSLATE.errorText.PT
+          scope.successMarketSnackTxt = scope.TRANSLATE.productMarketAddedTXT.PT
+      }
+      else if(scope.LANGUAGE == 'es-ES') {
+          scope.priceInMarketTXT = scope.TRANSLATE.priceInMarketTXT.ES
+          scope.productPriceTXT = scope.TRANSLATE.productPrice.ES
+          scope.marketNameTXT = scope.TRANSLATE.marketNameTXT.ES
+          scope.errorSnackTxt = scope.TRANSLATE.errorText.ES
+          scope.successMarketSnackTxt = scope.TRANSLATE.productMarketAddedTXT.ES
+      }
+      else if(scope.LANGUAGE == 'ru') {
+          scope.priceInMarketTXT = scope.TRANSLATE.priceInMarketTXT.RU
+          scope.productPriceTXT = scope.TRANSLATE.productPrice.RU
+          scope.marketNameTXT = scope.TRANSLATE.marketNameTXT.RU
+          scope.errorSnackTxt = scope.TRANSLATE.errorText.RU
+          scope.successMarketSnackTxt = scope.TRANSLATE.productMarketAddedTXT.RU
+      }
+      else if(scope.LANGUAGE == 'ch') {
+          scope.priceInMarketTXT = scope.TRANSLATE.priceInMarketTXT.CH
+          scope.productPriceTXT = scope.TRANSLATE.productPrice.CH
+          scope.marketNameTXT = scope.TRANSLATE.marketNameTXT.CH
+          scope.errorSnackTxt = scope.TRANSLATE.errorText.CH
+          scope.successMarketSnackTxt = scope.TRANSLATE.productMarketAddedTXT.CH
+      }
+      else if(scope.LANGUAGE == 'ko') {
+          scope.priceInMarketTXT = scope.TRANSLATE.priceInMarketTXT.KO
+          scope.productPriceTXT = scope.TRANSLATE.productPrice.KO
+          scope.marketNameTXT = scope.TRANSLATE.marketNameTXT.KO
+          scope.errorSnackTxt = scope.TRANSLATE.errorText.KO
+          scope.successMarketSnackTxt = scope.TRANSLATE.productMarketAddedTXT.KO
+      }
+    },
+    addProductForm(scope) {
+      if(scope.LANGUAGE == 'en-US') {
+        scope.productName = scope.TRANSLATE.productName.EN
+        scope.productPrice = scope.TRANSLATE.productPrice.EN
+        scope.exampleItem = scope.TRANSLATE.exampleItem.EN
+          scope.currency = scope.TRANSLATE.currency.EN
+      }
+      else if(scope.LANGUAGE == 'pt-BR') {
+          scope.productName = scope.TRANSLATE.productName.PT
+          scope.productPrice = scope.TRANSLATE.productPrice.PT
+          scope.exampleItem = scope.TRANSLATE.exampleItem.PT
+          scope.currency = scope.TRANSLATE.currency.PT
+      }
+      else if(scope.LANGUAGE == 'es-ES') {
+          scope.productName = scope.TRANSLATE.productName.ES
+          scope.productPrice = scope.TRANSLATE.productPrice.ES
+          scope.exampleItem = scope.TRANSLATE.exampleItem.ES
+          scope.currency = scope.TRANSLATE.currency.ES
+      }
+      else if(scope.LANGUAGE == 'ru') {
+          scope.productName = scope.TRANSLATE.productName.RU
+          scope.productPrice = scope.TRANSLATE.productPrice.RU
+          scope.exampleItem = scope.TRANSLATE.exampleItem.RU
+          scope.currency = scope.TRANSLATE.currency.RU
+      }
+      else if(scope.LANGUAGE == 'ch') {
+          scope.productName = scope.TRANSLATE.productName.CH
+          scope.productPrice = scope.TRANSLATE.productPrice.CH
+          scope.exampleItem = scope.TRANSLATE.exampleItem.CH
+          scope.currency = scope.TRANSLATE.currency.CH
+      }
+      else if(scope.LANGUAGE == 'ko') {
+          scope.productName = scope.TRANSLATE.productName.KO
+          scope.productPrice = scope.TRANSLATE.productPrice.KO
+          scope.exampleItem = scope.TRANSLATE.exampleItem.KO
+          scope.currency = scope.TRANSLATE.currency.KO
+      }
     }
   }  
+  
+
+  
 
 
-
-
-
-
-
-
-
-
+  
+  
+  
+  
+  
 
 
 

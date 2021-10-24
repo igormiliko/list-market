@@ -38,30 +38,7 @@ export default {
     }),
     methods: {
         putLanguage() {
-            if(this.LANGUAGE == 'en-US') {
-                this.productName = this.TRANSLATE.productName.EN
-                this.productPrice = this.TRANSLATE.productPrice.EN
-            }
-            else if(this.LANGUAGE == 'pt-BR') {
-                this.productName = this.TRANSLATE.productName.PT
-                this.productPrice = this.TRANSLATE.productPrice.PT
-            }
-             else if(this.LANGUAGE == 'es-ES') {
-                this.productName = this.TRANSLATE.productName.ES
-                this.productPrice = this.TRANSLATE.productPrice.ES
-            }
-             else if(this.LANGUAGE == 'ru') {
-                this.productName = this.TRANSLATE.productName.RU
-                this.productPrice = this.TRANSLATE.productPrice.RU
-            }
-             else if(this.LANGUAGE == 'ch') {
-                this.productName = this.TRANSLATE.productName.CH
-                this.productPrice = this.TRANSLATE.productPrice.CH
-            }
-             else if(this.LANGUAGE == 'ko') {
-                this.productName = this.TRANSLATE.productName.KO
-                this.productPrice = this.TRANSLATE.productPrice.KO
-            }
+            this.TRANSLATE.translating.addProductForm(this)
         }
     },
     watch: {
@@ -73,7 +50,7 @@ export default {
         this.putLanguage()
     },
     computed: {
-        ...mapState(['LANGUAGE', 'TRANSLATE', 'toShowAddProductPage'])
+        ...mapState(['LANGUAGE', 'TRANSLATE'])
     }
 
 }
