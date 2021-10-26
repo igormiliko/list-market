@@ -2,7 +2,7 @@
     <div id="login-page" class="flex flex-wrap w-screen justify-center 
                                 content-center lg:content-start 
                                 py-24 lg:py-0
-                                h-screen md:h-auto lg:h-screen">
+                                h-screen sm:h-auto lg:h-screen">
         <CardLogin :header="welcomeTXT" textColor="text-yellow-400" >
             <div class="w-full p-6 flex flex-col">
                 <Input :label="userNameTXT" />

@@ -1,6 +1,6 @@
 <template>
-    <div id="card-page" class="flex justify-center w-full h-screen" key="card">
-        <Card class="sm:mt-16" :header="cardHeader">
+    <div  id="card-page" class="flex justify-center w-full h-screen" key="card">
+        <Card class="mt-24 sm:mt-16 lg:mt-60" :header="cardHeader">
             <AddProductForm />
         </Card>
         <Snack emoji="&#9888;" :text="typeAllDatasTxt" bgColor="bg-red-400" />
@@ -8,7 +8,7 @@
     </div>
 </template>
 <script>
-import {  mapState } from 'vuex'
+import { mapState } from 'vuex'
 
 import Snack from '../components/snack/snack.vue'
 import Card from '../components/card/card.vue'

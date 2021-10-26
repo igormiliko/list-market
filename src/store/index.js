@@ -10,7 +10,7 @@ const store = createStore({
     showRegister: false,
     showForgot: false,
     marketList: [{name: 'banana', price:'2.35'}],
-    addMarket: true,
+    addMarket: false,
   }),
   mutations: {
     changeLang (state, lang) {

@@ -6,11 +6,11 @@
         </div>
         
         <div v-show="addMarket"
-             class="absolute flex flex-wrap justify-center top-0 h-screen w-full bg-gray-900 bg-opacity-50">
+             class="absolute top-0 h-screen w-full bg-gray-900 bg-opacity-50">
             <CardAddProduct />
         </div>
         <div v-show="showItemInMarket"
-             class="absolute flex flex-wrap justify-center top-0 h-screen w-full bg-gray-900 bg-opacity-50">
+             class="absolute top-0 h-screen w-full bg-gray-900 bg-opacity-50">
             <ShowItemInMarket />
         </div>
     </div>

@@ -2,7 +2,6 @@
   <header class="absolute w-full h-12 bg-blue-600 border-b text-white shadow-xl">
       <nav class="flex flex-row justify-around pt-2 shadow-lg">
         <div>
-          <div @click="debug" class="material-icons cursor-pointer">shopping_cart</div>
           <router-link to="login">
             <div class="material-icons cursor-pointer">shopping_cart</div>
           </router-link>
@@ -11,6 +10,12 @@
           </span>           
         </div>
           <div class="text-2xl text-yellow-400">{{ titleApp }}</div>
+        <div>
+            <div @click="toShowLanguagesTrue()" class="material-icons cursor-pointer">translate</div>
+          <span @click="toShowLanguagesTrue()" class="material-icons text-white cursor-pointer" >
+            arrow_drop_down
+          </span>           
+        </div>
       </nav>
         <div v-show="showLanguages">
           <div @click="toShowLanguagesFalse()"  class="absolute z-40 w-32 shadow-xl border-r-4 border-b-4 border-gray-100 text-center bg-gray-50 text-blue-400 rounded-md float-right right-0 md:right-28 lg:right-32 top-12">
@@ -33,16 +38,12 @@ export default {
     name: 'header',
     data(){
         return {
-            showLanguages: false,
-            titleApp: 'Market List',
+          titleApp: 'Market List',
         }
     },
 
     methods: {
-       ...mapMutations(['changeLang', 'toShowLanguagesTrue', 'toShowLanguagesFalse']),
-      debug() {
-        console.log(this.addMarket)
-      },
+      ...mapMutations(['changeLang', 'toShowLanguagesTrue', 'toShowLanguagesFalse']),
     },
 
     watch:{

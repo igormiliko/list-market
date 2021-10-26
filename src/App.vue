@@ -1,7 +1,7 @@
 <template>
   <div @pointermove="axlesToDrag" class="w-screen h-screen">  
     <Header class="absolute" />
-      <div @click="toShowLanguagesFalse()" class="overflow-hidden">   
+      <div class="overflow-hidden">   
         <router-view></router-view>
       </div>
     <CoinBtn @pointerdown="startDrag = true" @pointerup="startDrag = false" :style="[drag]" />
@@ -9,8 +9,6 @@
 </template>
 
 <script>
-import { mapState, mapMutations } from 'vuex'
-
 import Header from './components/layout/header.vue'
 //import RegisterPage from './pages/registerPage.vue'
 //import ForgotPassPage from './pages/forgotPassPage.vue'
@@ -40,7 +38,6 @@ export default {
     startDrag: false,
   }),
   methods: {
-    ...mapMutations(['toShowLanguagesFalse']),
     axlesToDrag(e){
       if(this.startDrag == true){
         console.log(e)
@@ -50,7 +47,6 @@ export default {
     }
   },
   computed: {
-    ...mapState(['toShowAddProductPage', 'showLogin']),
     drag(){
       if(this.startDrag == true){
         return {top: `${this.screenY - 25}px`, left: `${this.screenX - 25}px`}

@@ -1,5 +1,5 @@
 <template>
-<div class="flex justify-center w-full h-screen">
+<div class="flex justify-center content-center flex-wrap w-full h-screen">
     <Card :header="priceInMarketTXT">
         <div class="w-full p-6 flex flex-col">
             <Input :label="marketNameTXT" />
@@ -15,7 +15,7 @@
 </div>
 </template>
 <script>
-import { mapState } from 'vuex'
+import { mapState, mapMutations } from 'vuex'
 
 import Snack from '../snack/snack.vue'
 import Input from '../forms/input.vue'
@@ -41,6 +41,7 @@ export default {
         successMarketSnackTxt: 'Success! Market Added',
     }),
     methods: {
+        ...mapMutations(['showAddMarket']),
         putLanguage(){
             this.TRANSLATE.translating.addMarketCard(this)
         }

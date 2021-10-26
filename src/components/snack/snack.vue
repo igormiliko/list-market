@@ -1,5 +1,5 @@
 <template>
-    <div :class="bgColor" class="absolute flex flex-wrap shadow-2xl text-center justify-center content-center top-16 lg:top-16 px-4 py-4 text-2xl font-semibold rounded-md text-white">
+    <div :class="bgColor" class="absolute flex flex-wrap shadow-2xl text-center justify-center content-center top-16 lg:top-24 px-4 py-4 text-xl md:text-2xl font-semibold rounded-md text-white">
         {{emoji}} {{text}} {{emoji}}
     </div>
 </template>
