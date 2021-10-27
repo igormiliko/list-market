@@ -592,23 +592,6 @@ LANGUAGE: 'english',
       }
     }
   }  
-  
-
-  
-
-
-  
-  
-  
-  
-  
-
-
-
-
-
-
-
 }
 
 export default translateAPP

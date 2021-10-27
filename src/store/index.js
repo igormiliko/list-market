@@ -1,8 +1,10 @@
 import { createStore } from 'vuex'
 import translateAPP from './modules/translate'
+import APP from './modules/App'
 
 const store = createStore({
   state: () => ({
+    APP: APP,
     LANGUAGE: 'en-US',
     TRANSLATE: translateAPP,
     showItemInMarket: false,

@@ -1,6 +1,6 @@
 <template>
     <div id="start" class="pt-8">
-        <div class="text-white text-3xl bg-yellow-600 bg-opacity-70 font-bold text-center mb-3 shadow-2xl p-2">{{addProduct}}</div>
+        <div class="text-white text-3xl font-bold text-center mb-3 shadow-2xl p-2">{{addProduct}}</div>
         <router-link to="/add_product">
             <div class="flex justify-center">
                     <button class="material-icons w-8/12 h-8 mb-6 border-2 border-green-400 rounded-lg text-center text-blue-400 bg-white bg-opacity-50 hover:bg-green-400 hover:text-white hover:pointer">

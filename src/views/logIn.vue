@@ -20,7 +20,7 @@
                     </DefaultBtn>
                 </div>
                 <div class="flex justify-center my-4">
-                    <DefaultBtn color="red" class="text-3xl">
+                    <DefaultBtn @click="debug" color="red" class="text-3xl">
                         <i class="fa fa-google" aria-hidden="true"></i>
                     </DefaultBtn>
                 </div>
@@ -67,6 +67,11 @@ export default {
         ...mapMutations(['toShowLogin', 'toShowForgot', 'toShowRegister']),
         putLanguage(){
             this.TRANSLATE.translating.login(this)
+        },
+        debug(){
+            console.log(this.APP)
+            this.APP.registerUser('testing', 'teste@teste.com', '61985908787', '1234', 'ADM')
+            
         }
     },
     mounted() {
@@ -78,7 +83,7 @@ export default {
        }
     },
     computed: {
-        ...mapState(['TRANSLATE', 'LANGUAGE'])
+        ...mapState(['TRANSLATE', 'LANGUAGE', 'APP'])
     }
 }
 </script>
