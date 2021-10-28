@@ -71,7 +71,9 @@ export default {
         debug(){
             console.log(this.APP)
             this.APP.registerUser('testing', 'teste@teste.com', '61985908787', '1234', 'ADM')
-            
+            this.APP.users[0].createList('Frutas')
+            console.log('User : ===>',this.APP.users[0])
+            console.log('Market List ===> ',this.APP.users[0].marketList[0])
         }
     },
     mounted() {
